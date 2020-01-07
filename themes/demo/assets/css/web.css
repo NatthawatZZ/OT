@@ -1,0 +1,635 @@
+.mediaViewInfo {
+	--web-view-name: Web 1920 – 1;
+	--web-view-id: Web_1920___1;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Web_1920___1;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Web_1920___1 {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	--web-view-name: Web 1920 – 1;
+	--web-view-id: Web_1920___1;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+.Rectangle_3 {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 86px;
+	left: 614px;
+	top: 682px;
+}
+#Group_1 {
+	position: absolute;
+	width: 693px;
+	height: 82px;
+	left: 614px;
+	top: 436px;
+	overflow: visible;
+}
+.Rectangle_5 {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 82px;
+	left: 0px;
+	top: 0px;
+}
+#Email___User_name {
+	opacity: 0.51;
+	position: absolute;
+	left: 86px;
+	top: 16px;
+	overflow: visible;
+	width: 255px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 46px;
+	color: rgba(146,146,146,1);
+}
+#Login_bg {
+	position: absolute;
+	left: 902px;
+	top: 685px;
+	overflow: visible;
+	width: 118px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	color: rgba(255,255,255,1);
+}
+#SIGN_IN {
+	position: absolute;
+	left: 818px;
+	top: 249px;
+	overflow: visible;
+	width: 258px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 100px;
+	color: rgba(43,43,43,1);
+}
+.Rectangle_5_s {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 82px;
+	left: 614px;
+	top: 546px;
+}
+#Password_bu {
+	opacity: 0.51;
+	position: absolute;
+	left: 699px;
+	top: 560px;
+	overflow: visible;
+	width: 139px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 46px;
+	color: rgba(146,146,146,1);
+}
+#lock_bv {
+	opacity: 0.61;
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	left: 641px;
+	top: 565px;
+	overflow: visible;
+}
+#Group_2 {
+	position: absolute;
+	width: 379px;
+	height: 49px;
+	left: 902px;
+	top: 783px;
+	overflow: visible;
+}
+#New_member__ {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 190px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 41px;
+	color: rgba(177,177,177,1);
+}
+#Create_account {
+	position: absolute;
+	left: 189px;
+	top: 0px;
+	overflow: visible;
+	width: 191px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 41px;
+	color: rgba(60,89,249,1);
+}
+#user_by {
+	opacity: 0.49;
+	position: absolute;
+	width: 39px;
+	height: 39px;
+	left: 640px;
+	top: 457px;
+	overflow: visible;
+}
+.Rectangle_8 {
+	position: absolute;
+	overflow: visible;
+	width: 274px;
+	height: 18px;
+	left: 810px;
+	top: 342px;
+}
+.Rectangle_9 {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 86px;
+	left: 614px;
+	top: 682px;
+}
+#Group_3 {
+	position: absolute;
+	width: 693px;
+	height: 82px;
+	left: 614px;
+	top: 436px;
+	overflow: visible;
+}
+.Rectangle_5_ {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 82px;
+	left: 0px;
+	top: 0px;
+}
+#Email___User_name_ {
+	opacity: 0.51;
+	position: absolute;
+	left: 86px;
+	top: 16px;
+	overflow: visible;
+	width: 255px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 46px;
+	color: rgba(146,146,146,1);
+}
+#Login_bg {
+	position: absolute;
+	left: 902px;
+	top: 685px;
+	overflow: visible;
+	width: 118px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	color: rgba(255,255,255,1);
+}
+.Rectangle_10 {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 82px;
+	left: 614px;
+	top: 546px;
+}
+#Password_bu {
+	opacity: 0.51;
+	position: absolute;
+	left: 699px;
+	top: 560px;
+	overflow: visible;
+	width: 139px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 46px;
+	color: rgba(146,146,146,1);
+}
+#lock_bv {
+	opacity: 0.61;
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	left: 641px;
+	top: 565px;
+	overflow: visible;
+}
+#Group_4 {
+	position: absolute;
+	width: 379px;
+	height: 49px;
+	left: 902px;
+	top: 783px;
+	overflow: visible;
+}
+#New_member___ {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 190px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 41px;
+	color: rgba(177,177,177,1);
+}
+#Create_account_ba {
+	position: absolute;
+	left: 189px;
+	top: 0px;
+	overflow: visible;
+	width: 191px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 41px;
+	color: rgba(60,89,249,1);
+}
+#user_by {
+	opacity: 0.49;
+	position: absolute;
+	width: 39px;
+	height: 39px;
+	left: 640px;
+	top: 457px;
+	overflow: visible;
+}
+.Rectangle_14 {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 86px;
+	left: 614px;
+	top: 682px;
+}
+#Group_5 {
+	position: absolute;
+	width: 693px;
+	height: 82px;
+	left: 614px;
+	top: 436px;
+	overflow: visible;
+}
+.Rectangle_5_be {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 82px;
+	left: 0px;
+	top: 0px;
+}
+#Email___User_name_bf {
+	opacity: 0.51;
+	position: absolute;
+	left: 86px;
+	top: 16px;
+	overflow: visible;
+	width: 255px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 46px;
+	color: rgba(146,146,146,1);
+}
+#Login_bg {
+	position: absolute;
+	left: 902px;
+	top: 685px;
+	overflow: visible;
+	width: 118px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	color: rgba(255,255,255,1);
+}
+.Rectangle_15 {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 82px;
+	left: 614px;
+	top: 546px;
+}
+#Password_bu {
+	opacity: 0.51;
+	position: absolute;
+	left: 699px;
+	top: 560px;
+	overflow: visible;
+	width: 139px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 46px;
+	color: rgba(146,146,146,1);
+}
+#lock_bv {
+	opacity: 0.61;
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	left: 641px;
+	top: 565px;
+	overflow: visible;
+}
+#Group_6 {
+	position: absolute;
+	width: 379px;
+	height: 49px;
+	left: 902px;
+	top: 783px;
+	overflow: visible;
+}
+#New_member___bl {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 190px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 41px;
+	color: rgba(177,177,177,1);
+}
+#Create_account_bm {
+	position: absolute;
+	left: 189px;
+	top: 0px;
+	overflow: visible;
+	width: 191px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 41px;
+	color: rgba(60,89,249,1);
+}
+#user_by {
+	opacity: 0.49;
+	position: absolute;
+	width: 39px;
+	height: 39px;
+	left: 640px;
+	top: 457px;
+	overflow: visible;
+}
+.Rectangle_19 {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 86px;
+	left: 614px;
+	top: 682px;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: Web_1920___4.html;
+	cursor: pointer;
+}
+.Rectangle_5_bp {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 82px;
+	left: 614px;
+	top: 436px;
+}
+#Component_1___1 {
+	position: absolute;
+	width: 254px;
+	height: 55px;
+	left: 700px;
+	top: 452px;
+	overflow: visible;
+}
+#Email___User_name_br {
+	opacity: 0.51;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 255px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 46px;
+	color: rgba(146,146,146,1);
+}
+#Sign_in {
+	position: absolute;
+	left: 902px;
+	top: 685px;
+	overflow: visible;
+	width: 146px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	color: rgba(255,255,255,1);
+}
+.Rectangle_20 {
+	position: absolute;
+	overflow: visible;
+	width: 693px;
+	height: 82px;
+	left: 614px;
+	top: 546px;
+}
+#Password_bu {
+	opacity: 0.51;
+	position: absolute;
+	left: 699px;
+	top: 560px;
+	overflow: visible;
+	width: 139px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 46px;
+	color: rgba(146,146,146,1);
+}
+#lock_bv {
+	opacity: 0.61;
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	left: 641px;
+	top: 565px;
+	overflow: visible;
+}
+#New_member___bw {
+	position: absolute;
+	left: 902px;
+	top: 783px;
+	overflow: visible;
+	width: 190px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 41px;
+	color: rgba(177,177,177,1);
+}
+#Create_account_bx {
+	position: absolute;
+	left: 1091px;
+	top: 783px;
+	overflow: visible;
+	width: 191px;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: Web_1920___2.html;
+	cursor: pointer;
+	text-align: left;
+	font-family: DB Heavent;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 41px;
+	color: rgba(60,89,249,1);
+}
+#user_by {
+	opacity: 0.49;
+	position: absolute;
+	width: 39px;
+	height: 39px;
+	left: 640px;
+	top: 457px;
+	overflow: visible;
+}
+
+
+Messages:
+1. Exported image: lock_bv.png (1k)
+2. Exported image: lock_bv@2x.png (2k)
+3. Exported image: user_by.png (1k)
+4. Exported image: user_by@2x.png (2k)
+5. Exported image: lock_bv.png (1k)
+6. Exported image: lock_bv@2x.png (2k)
+7. Exported image: user_by.png (1k)
+8. Exported image: user_by@2x.png (2k)
+9. Exported image: lock_bv.png (1k)
+10. Exported image: lock_bv@2x.png (2k)
+11. Exported image: user_by.png (1k)
+12. Exported image: user_by@2x.png (2k)
+13. Exported image: lock_bv.png (1k)
+14. Exported image: lock_bv@2x.png (2k)
+15. Exported image: user_by.png (1k)
+16. Exported image: user_by@2x.png (2k)
+17. Exported image: Total image size 8k / 16k
+
+Warnings:
+1. Model already added: Model already added for Text named "Login"
+2. Model already added: Model already added for Text named "Password"
+3. Model already added: Model already added for Rectangle named "lock"
+4. Model already added: Model already added for Rectangle named "user"
+5. Model already added: Model already added for Text named "Login"
+6. Model already added: Model already added for Text named "Password"
+7. Model already added: Model already added for Rectangle named "lock"
+8. Model already added: Model already added for Rectangle named "user"
+9. Model already added: Model already added for Text named "Password"
+10. Model already added: Model already added for Rectangle named "lock"
+11. Model already added: Model already added for Rectangle named "user"
+12. Duplicate ID: The Rectangle named, "Rectangle 5" on artboard, "Web 1920 – 1" was renamed to, "Rectangle_5_s"
+13. Duplicate ID: The Rectangle named, "Rectangle 5" on artboard, "Web 1920 – 1" was renamed to, "Rectangle_5_"
+14. Duplicate ID: The Text named, "Email / User name" on artboard, "Web 1920 – 1" was renamed to, "Email___User_name_"
+15. Duplicate ID: The Text named, "Login" on artboard, "Web 1920 – 1" was renamed to, "Login_"
+16. Duplicate ID: The Text named, "Password" on artboard, "Web 1920 – 1" was renamed to, "Password_"
+17. Duplicate ID: The Rectangle named, "lock" on artboard, "Web 1920 – 1" was renamed to, "lock_"
+18. Duplicate ID: The Text named, "New member? " on artboard, "Web 1920 – 1" was renamed to, "New_member___"
+19. Duplicate ID: The Text named, "Create account" on artboard, "Web 1920 – 1" was renamed to, "Create_account_ba"
+20. Duplicate ID: The Rectangle named, "user" on artboard, "Web 1920 – 1" was renamed to, "user_bb"
+21. Duplicate ID: The Rectangle named, "Rectangle 5" on artboard, "Web 1920 – 1" was renamed to, "Rectangle_5_be"
+22. Duplicate ID: The Text named, "Email / User name" on artboard, "Web 1920 – 1" was renamed to, "Email___User_name_bf"
+23. Duplicate ID: The Text named, "Login" on artboard, "Web 1920 – 1" was renamed to, "Login_bg"
+24. Duplicate ID: The Text named, "Password" on artboard, "Web 1920 – 1" was renamed to, "Password_bi"
+25. Duplicate ID: The Rectangle named, "lock" on artboard, "Web 1920 – 1" was renamed to, "lock_bj"
+26. Duplicate ID: The Text named, "New member? " on artboard, "Web 1920 – 1" was renamed to, "New_member___bl"
+27. Duplicate ID: The Text named, "Create account" on artboard, "Web 1920 – 1" was renamed to, "Create_account_bm"
+28. Duplicate ID: The Rectangle named, "user" on artboard, "Web 1920 – 1" was renamed to, "user_bn"
+29. Duplicate ID: The Rectangle named, "Rectangle 5" on artboard, "Web 1920 – 1" was renamed to, "Rectangle_5_bp"
+30. Duplicate ID: The Text named, "Email / User name" on artboard, "Web 1920 – 1" was renamed to, "Email___User_name_br"
+31. Duplicate ID: The Text named, "Password" on artboard, "Web 1920 – 1" was renamed to, "Password_bu"
+32. Duplicate ID: The Rectangle named, "lock" on artboard, "Web 1920 – 1" was renamed to, "lock_bv"
+33. Duplicate ID: The Text named, "New member? " on artboard, "Web 1920 – 1" was renamed to, "New_member___bw"
+34. Duplicate ID: The Text named, "Create account" on artboard, "Web 1920 – 1" was renamed to, "Create_account_bx"
+35. Duplicate ID: The Rectangle named, "user" on artboard, "Web 1920 – 1" was renamed to, "user_by"

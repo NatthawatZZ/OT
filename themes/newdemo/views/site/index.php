@@ -11,7 +11,7 @@
 
 <?php include Yii::app()->basePath .'/../themes/newdemo/include/inc-header.php'; ?>
   <div class="container">
-    <h1 class="intro-title mb-4">OT Bangkok Web Solutions</h1>
+    <h1 class="intro-title mb-4">มาร์ค น้อย</h1>
       <p class="intro-subtitle"><span class="text-slider-items">ระบบค่าตอบแทนการทำงานล่วงเวลา (OT)
         ,ระบบค่าเดินทางพนักงาน และอื่นๆ,
         ระบบรายงาน,บริษัท บางกอก เว็บ โซลูชั่น</span><strong class="text-slider"></strong></p>

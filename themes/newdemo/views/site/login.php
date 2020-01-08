@@ -57,7 +57,7 @@
                 						<span class="txt2">
                 							&nbsp;&nbsp;
                 						</span>
-                						<a href="index.php?r=site/register" class="txt2 bo1">
+                						<a href="index.php?r=TableMember/index" class="txt2 bo1">
                 							ลงทะเบียน
                 						</a>
                 					</div>

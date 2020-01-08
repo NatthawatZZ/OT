@@ -19,7 +19,7 @@
           <a class="nav-link js-scroll " href="index.php"><?php echo $nav1 ;?></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll" href="index.php?r=site/register"><?php echo $nav2 ;?></a>
+          <a class="nav-link js-scroll" href="index.php?r=TableMember/create"><?php echo $nav2 ;?></a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll" href="index.php?r=site/login"><?php echo $nav3 ;?></a>

@@ -16,7 +16,7 @@
                       <div class="container-login100">
                       <div class="overlay-itro"></div>
                       <div class="wrap-login100 p-l-80 p-r-80 p-t-20 p-b-20">
-                				<form class="login100-form validate-form flex-sb flex-w">
+                  				<form class="login100-form validate-form flex-sb flex-w">
                 					<span class="login100-form-title p-b-53">
                 						ลงทะเบียน
                 					</span>
@@ -38,7 +38,13 @@
                               คำนำหน้า
                             </span>
                             <div class="wrap-input100 validate-input" data-validate = "Username is required">
-                              <input class="input100" type="text" name="username" placeholder="คำนำหน้า">
+                              <!-- <input class="input100" type="text" name="username" placeholder="คำนำหน้า"> -->
+                              <select class="input100" >
+                                <option  disabled selected >Prefix / คำนำหน้า</option>
+                                  <option>Mr./นาย</option>
+                                  <option>Mrs./นาง</option>
+                                  <option>Miss/นางสาว</option>
+                                </select>
                               <span class="focus-input100"></span>
                             </div>
                           </div>
@@ -128,7 +134,6 @@
                 						ลงทะเบียน
                 						</button>
                 					</div>
-
                 					<div class="w-full text-center p-t-55">
                 						<a href="index.php?r=site/login" class="txt2 bo1">
                 							เข้าสู่ระบบ

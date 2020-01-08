@@ -6,17 +6,16 @@ $this->breadcrumbs=array(
 	'Table Members'=>array('index'),
 	$model->mb_id,
 );
-
-$this->menu=array(
-	array('label'=>'List TableMember', 'url'=>array('index')),
-	array('label'=>'Create TableMember', 'url'=>array('create')),
-	array('label'=>'Update TableMember', 'url'=>array('update', 'id'=>$model->mb_id)),
-	array('label'=>'Delete TableMember', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->mb_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage TableMember', 'url'=>array('admin')),
-);
 ?>
+<?php //include Yii::app()->basePath .'/../themes/newdemo/include/inc-header.php'; ?>
+<?php include Yii::app()->basePath . '/../themes/newdemo/include/inc.php'; ?>
+<?php include Yii::app()->basePath . '/../themes/newdemo/include/inc-css.php'; ?>
 
-<h1>View TableMember #<?php echo $model->mb_id; ?></h1>
+<main id="content" >
+	 <div class="container-login100">
+		<div class="wrap-login100 p-l-80 p-r-80 p-t-20 p-b-20">
+
+<h1 class="login100-form-title p-b-20">ข้อมูลสมาชิก <br>คุณ <?php echo $model->mb_name; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -36,3 +35,7 @@ $this->menu=array(
 		'active',
 	),
 )); ?>
+			</div>
+		</div>
+	</div>
+</main>

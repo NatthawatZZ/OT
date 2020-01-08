@@ -10,119 +10,6 @@
        }
     </style>
                 <main id="content" >
-                	<!-- <div class="limiter">
-                    <div class="intro route bg-image" style="background-image: url(<?php echo Yii::app()->theme->baseUrl.'/assets/img/intro-bg.jpg'?>)">
-                      <div class="container-login100">
-                      <div class="overlay-itro"></div>
-                      <div class="wrap-login100 p-l-80 p-r-80 p-t-20 p-b-20">
-                				<form method="post" class="login100-form validate-form flex-sb flex-w" >
-                					<span class="login100-form-title p-b-53">
-                						ลงทะเบียน
-                					</span>
-                            <div class="form-row">
-                            <div class="col-12">
-                          <div class="p-t-0 p-b-9">
-                            <span class="txt1">
-                              รหัสพนักงาน
-                            </span>
-                          </div>
-                          <div class="wrap-input100 validate-input" data-validate = "Username is required">
-                            <input class="input100" type="text" name="psn_id" placeholder="รหัสพนักงาน">
-                            <span class="focus-input100"></span>
-                          </div>
-                        </div>
-                          <div class="col-4">
-                					<div class="p-t-5 p-b-9 ">
-                            <span class="txt1">
-                              คำนำหน้า
-                            </span>
-                            <div class="wrap-input100 validate-input" data-validate = "Username is required">
-                              <select name="mb_title" class="input100" >
-                                <option  disabled selected >Prefix / คำนำหน้า</option>
-                                  <option value="นาย">นาย</option>
-                                </select>
-                              <span class="focus-input100"></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-8">
-                        <div class="p-t-5 p-b-9 ">
-                          <span class="txt1">
-                            ชื่อ-นามสกุล
-                          </span>
-                          <div class="wrap-input100 validate-input" data-validate = "Username is required">
-                            <input class="input100" type="text" name="mb_name" placeholder="ชื่อ-นามสกุล">
-                            <span class="focus-input100"></span>
-                          </div>
-                        </div>
-                      </div>
-                        <div class="col-12">
-                          <div class="p-t-10 p-b-9">
-                            <span class="txt1">
-                              เลขบัตรประจำตัวประชาชน
-                            </span>
-                          </div>
-                          <div class="wrap-input100 validate-input" data-validate = "Username is required">
-                            <input class="input100" type="text" name="mb_idcard" placeholder="เลขบัตรประจำตัวประชาชน" min="13">
-                            <span class="focus-input100"></span>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="p-t-10 p-b-9">
-                            <span class="txt1">
-                              หมายเลขโทรศัพท์
-                            </span>
-                          </div>
-                          <div class="wrap-input100 validate-input" data-validate = "Username is required">
-                            <input class="input100" type="tel" name="mb_mobile" placeholder="เบอร์โทร" min="9" max="10">
-                            <span class="focus-input100"></span>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="p-t-10 p-b-9">
-                            <span class="txt1">
-                              Email
-                            </span>
-                          </div>
-                          <div class="wrap-input100 validate-input" data-validate = "Email is required">
-                            <input class="input100" type="email" name="mb_email" placeholder="Email">
-                            <span class="focus-input100"></span>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="p-t-10 p-b-9">
-                            <span class="txt1">
-                            ตำแหน่ง
-                            </span>
-                          </div>
-                          <div class="wrap-input100 validate-input" data-validate = "Department is required">
-                            <select name="pst_id" class="input100" >
-                              <option  disabled selected >Department / ตำแหน่ง</option>
-                                <option value="01">Programmer</option>
-                                <option value="2">Web Developer</option>
-                              </select>
-                            <span class="focus-input100"></span>
-                          </div>
-                          <input type="hidden" name="active" value="y">
-                        </div>
-                              </div>
-                					<div class="container-login100-form-btn m-t-17">
-                						<button class="login100-form-btn" type="submit">
-                						ลงทะเบียน
-                						</button>
-                					</div>
-                					<div class="w-full text-center p-t-55">
-                						<a href="index.php?r=site/login" class="txt2 bo1">
-                							เข้าสู่ระบบ
-                						</a>
-                					</div>
-                				</form>
-                			</div>
-                		</div>
-                  </div>
-                	</div> -->
-                	 <!-- <div id="dropDownSelect1"></div> -->
-
                    <div class="container-login100">
                     <div class="wrap-login100 p-l-80 p-r-80 p-t-20 p-b-20">
 
@@ -212,10 +99,12 @@
              				<?php //echo $form->labelEx($model,'active',array('class'=>'txt1')); ?>
              				<?php echo $form->hiddenField($model,'active',array('class'=>'input100','value'=>'y')); ?>
              				<?php echo $form->error($model,'active'); ?>
-                    <br><br><br><br>
-             			<div class="row buttons">
+
+             			<div class="row ">
+                    <div class="container-login100-form-btn m-t-20">
              				<?php echo CHtml::submitButton($model->isNewRecord ? 'ลงทะบียน' : 'Save',array('class'=>'login100-form-btn')); ?>
-             			</div>
+                    </div>
+                	</div>
 
              		<?php $this->endWidget(); ?>
                     </div>

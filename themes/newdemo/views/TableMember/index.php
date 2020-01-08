@@ -12,15 +12,10 @@
                 <main id="content" >
                    <div class="container-login100">
                     <div class="wrap-login100 p-l-80 p-r-80 p-t-20 p-b-20">
-
                    <div class="form">
                    <?php $form=$this->beginWidget('booster.widgets.TbActiveForm',array(
                    	'id'=>'table-member-form',
                      'htmlOptions' => array('class' => 'login100-form validate-form flex-sb flex-w'),
-                   	// Please note: When you enable ajax validation, make sure the corresponding
-                   	// controller action is handling ajax validation correctly.
-                   	// There is a call to performAjaxValidation() commented in generated controller code.
-                   	// See class documentation of CActiveForm for details on this.
                    	'enableAjaxValidation'=>false,
                    )); ?>
                   <?php echo $form->errorSummary($model); ?>
@@ -95,7 +90,7 @@
              				<?php //echo $form->labelEx($model,'update_by',array('class'=>'txt1')); ?>
              				<?php echo $form->hiddenField($model,'update_by',array('class'=>'input100')); ?>
              				<?php echo $form->error($model,'update_by'); ?>
-
+                    
              				<?php //echo $form->labelEx($model,'active',array('class'=>'txt1')); ?>
              				<?php echo $form->hiddenField($model,'active',array('class'=>'input100','value'=>'y')); ?>
              				<?php echo $form->error($model,'active'); ?>

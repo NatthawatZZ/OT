@@ -3,7 +3,6 @@
 class ZHtml extends CHtml
 
 {
-
         public static function enumItem($model,$attribute)
 
         {

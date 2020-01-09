@@ -42,7 +42,7 @@ class TableMember extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('psn_id, pst_id, active', 'required'),
+			array('psn_id, pst_id, active , mb_idcard,mb_name ,mb_email ,mb_mobile ', 'required'),
 			array('psn_id, mb_idcard, pst_id, created_by, update_by', 'numerical', 'integerOnly'=>true),
 			array('mb_title', 'length', 'max'=>18),
 			array('mb_name, mb_email', 'length', 'max'=>255),
@@ -90,6 +90,18 @@ class TableMember extends CActiveRecord
 			'update_by' => 'Update By',
 			'active' => 'Active',
 		);
+	}
+	public function beforeSave()
+	{
+			if($this->isNewRecord)
+			{
+					$this->created_date=new CDbExpression('NOW()');
+					//$this->created_by=Yii::app()->table_member->mb_id;
+			}else{
+				$this->update_date=new CDbExpression('NOW()');
+			//	$this->update_by=Yii::app()->table_member->mb_id;
+			}
+			return parent::beforeSave();
 	}
 
 	/**
@@ -139,4 +151,7 @@ class TableMember extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+
+
 }

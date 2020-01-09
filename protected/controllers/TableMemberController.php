@@ -19,6 +19,7 @@ class TableMemberController extends Controller
 		);
 	}
 
+
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
@@ -88,15 +89,13 @@ class TableMemberController extends Controller
 		if(isset($_POST['TableMember']))
 		 {
 		  $model->attributes=$_POST['TableMember'];
-
-			if($model->save())
-				// $model->save();
-			$this->redirect(array('view','id'=>$model->mb_id));
 		}
+		if($model->save())
+		$this->redirect(array('view','id'=>$model->mb_id));
 
 		$position = MasterPosition::model()->findAll(array('order'=>'pst_id ASC'));
 		$employ = TablePersonnel::model()->findAll(array('order'=>'psn_per_id ASC'));
-		$this->render('index',array(
+		$this->render('signup',array(
 			'model'=>$model,
 			'position'=>$position,
 			'employ' => $employ,

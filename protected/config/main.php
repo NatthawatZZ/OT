@@ -9,6 +9,8 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'OT Bangkok Web Solutions',
 	'theme'=>'newdemo',
+	 'timeZone' => 'Asia/Bangkok',
+	 'language'=>'th',
 	// 'defaultController' => 'site/login',
 
 	// preloading 'log' component
@@ -41,6 +43,8 @@ return array(
 		),
 			'booster' => array(
 			'class' => 'ext.booster.components.Booster',
+		),'messages'=>array(
+			'basePath'=>Yiibase::getPathOfAlias('application.messages')
 		),
 
 

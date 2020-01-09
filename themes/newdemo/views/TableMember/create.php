@@ -15,4 +15,4 @@ $this->menu=array(
 
 <h1>Create TableMember</h1>
 
-<?php $this->renderPartial('index', array('model'=>$model,'position'=>$position)); ?>
+<?php $this->renderPartial('index', array('model'=>$model,'position'=>$position,'employ'=>$employ)); ?>

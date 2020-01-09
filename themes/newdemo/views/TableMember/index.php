@@ -23,7 +23,11 @@
                 	<?php echo $form->labelEx($model,'ลงทะเบียน',array('class'=>'login100-form-title p-b-20')); ?>
              			<div class="row">
              				<?php echo $form->labelEx($model,'psn_id',array('class'=>'txt1')); ?>
-             				<?php echo $form->textField($model,'psn_id',array('class'=>'input100','placeholder'=>'รหัสพนักงาน')); ?>
+             				<?php //echo $form->textField($model,'psn_id',array('class'=>'input100','placeholder'=>'รหัสพนักงาน')); ?>
+                    <?php echo $form->dropDownList($model,'psn_id',CHtml::listData($employ,'psn_id','psn_per_id')
+                    ,array('class'=>'input100'),
+                            array('promt'=>'รหัสพนักงาน','psn_id'=>'employ')
+                          ); ?>
              				<?php echo $form->error($model,'psn_id'); ?>
              			</div>
 
@@ -42,13 +46,13 @@
 
              			<div class="row">
              				<?php echo $form->labelEx($model,'mb_idcard',array('class'=>'txt1')); ?>
-             				<?php echo $form->textField($model,'mb_idcard',array('class'=>'input100','placeholder'=>'หมายเลขบัตรประชาชน')); ?>
+             				<?php echo $form->textField($model,'mb_idcard',array('class'=>'input100','placeholder'=>'หมายเลขบัตรประชาชน','maxlength'=>13)); ?>
              				<?php echo $form->error($model,'mb_idcard'); ?>
              			</div>
 
              			<div class="row">
              				<?php echo $form->labelEx($model,'mb_mobile',array('class'=>'txt1')); ?>
-             				<?php echo $form->textField($model,'mb_mobile',array('class'=>'input100','placeholder'=>'หมายเลขโทรศัพท์มือถือ')); ?>
+             				<?php echo $form->textField($model,'mb_mobile',array('class'=>'input100','placeholder'=>'หมายเลขโทรศัพท์มือถือ','maxlength'=>10)); ?>
              				<?php echo $form->error($model,'mb_mobile'); ?>
              			</div>
 
@@ -68,12 +72,8 @@
              				<?php echo $form->error($model,'pst_id'); ?>
              			</div>
 
-
              				<?php //echo $form->labelEx($model,'created_date',array('class'=>'txt1')); ?>
              				<?php echo $form->hiddenField($model,'created_date',array('class'=>'input100')); ?>
-             				<?php echo $form->error($model,'created_date'); ?>
-
-
 
              				<?php //echo $form->labelEx($model,'created_by',array('class'=>'txt1')); ?>
              				<?php echo $form->hiddenField($model,'created_by',array('class'=>'input100')); ?>
@@ -90,7 +90,7 @@
              				<?php //echo $form->labelEx($model,'update_by',array('class'=>'txt1')); ?>
              				<?php echo $form->hiddenField($model,'update_by',array('class'=>'input100')); ?>
              				<?php echo $form->error($model,'update_by'); ?>
-                    
+
              				<?php //echo $form->labelEx($model,'active',array('class'=>'txt1')); ?>
              				<?php echo $form->hiddenField($model,'active',array('class'=>'input100','value'=>'y')); ?>
              				<?php echo $form->error($model,'active'); ?>

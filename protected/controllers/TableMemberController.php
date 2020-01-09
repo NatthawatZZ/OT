@@ -95,9 +95,11 @@ class TableMemberController extends Controller
 		}
 
 		$position = MasterPosition::model()->findAll(array('order'=>'pst_id ASC'));
+		$employ = TablePersonnel::model()->findAll(array('order'=>'psn_per_id ASC'));
 		$this->render('index',array(
 			'model'=>$model,
 			'position'=>$position,
+			'employ' => $employ,
 		));
 	}
 

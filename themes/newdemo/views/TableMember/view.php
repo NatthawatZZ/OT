@@ -19,6 +19,7 @@ $this->breadcrumbs=array(
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
+	'htmlOptions' => array('class' => 'login100-form '),
 	'attributes'=>array(
 		'mb_id',
 		'psn_id',
@@ -33,9 +34,9 @@ $this->breadcrumbs=array(
 		'update_date',
 		'update_by',
 		'active',
-	),
-)); ?>
+	)
+));
+?>
 			</div>
 		</div>
-	</div>
 </main>

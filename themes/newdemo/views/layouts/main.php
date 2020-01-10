@@ -9,14 +9,7 @@
 
 <body>
   <body id="page-top">
-    <div id="home" class="intro route bg-image"style="background-image: url(#fff)">
-    <br><br><center><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/logo1.png'?>" width="270" height="78"></center>
-      <div class="intro-content display-table">
-        <div class="table-cell">
-              <?php echo $content; ?>
-        </div>
-      </div>
-    </div>
+    <?php echo $content; ?>
     <div id="preloader"></div>
     <?php include Yii::app()->basePath .'/../themes/newdemo/include/inc-js.php'; ?>
   </body>

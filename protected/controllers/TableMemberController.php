@@ -52,6 +52,7 @@ class TableMemberController extends Controller
 	 */
 	public function actionView($id)
 	{
+
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -83,6 +84,7 @@ class TableMemberController extends Controller
 	 */
 	public function actionCreate()
 	{
+		// $this->layout = false;
 		$model=new TableMember;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

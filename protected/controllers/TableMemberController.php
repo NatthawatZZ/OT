@@ -89,11 +89,27 @@ class TableMemberController extends Controller
 		if(isset($_POST['TableMember']))
 		 {
 		  $model->attributes=$_POST['TableMember'];
-		}
-		if($model->save())
-		// $this->redirect(array('view','id'=>$model->mb_id));
-		$this->redirect(array('site/login'));
 
+			$ct_psn_id=$model->psn_id;
+			$ct_mb_title=$model->mb_title;
+			$ct_mb_name=$model->mb_name;
+			$ct_mb_idcard=$model->mb_idcard;
+			$ct_mb_mobile=$model->mb_mobile;
+			$ct_mb_email=$model->mb_email;
+			$ct_pst_id=$model->pst_id;
+			$ct_created_date=$model->created_date;
+			$ct_created_by=$model->created_by;
+			$ct_update_date=$model->update_date;
+			$ct_update_by=$model->update_by;
+			$ct_active=$model->active;
+
+		}
+		if($model->save()){
+		// $this->redirect(array('view','id'=>$model->mb_id));
+		Email::sendMail($ct_psn_id,$ct_mb_title,$ct_mb_name,$ct_mb_idcard,$ct_mb_mobile,$ct_mb_email,$ct_pst_id,
+			$ct_created_date,$ct_created_by,$ct_update_date,$ct_update_by,$ct_active);
+		$this->redirect(array('site/login'));
+}
 		$position = MasterPosition::model()->findAll(array('order'=>'pst_id ASC'));
 		$employ = TablePersonnel::model()->findAll(array('order'=>'psn_per_id ASC'));
 		$this->render('signup',array(

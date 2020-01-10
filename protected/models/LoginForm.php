@@ -10,7 +10,6 @@ class LoginForm extends CFormModel
 	public $username;
 	public $password;
 	public $rememberMe;
-
 	private $_identity;
 
 	/**
@@ -29,7 +28,6 @@ class LoginForm extends CFormModel
 			array('password', 'authenticate'),
 		);
 	}
-
 	/**
 	 * Declares attribute labels.
 	 */
@@ -39,7 +37,6 @@ class LoginForm extends CFormModel
 			'rememberMe'=>'Remember me next time',
 		);
 	}
-
 	/**
 	 * Authenticates the password.
 	 * This is the 'authenticate' validator as declared in rules().

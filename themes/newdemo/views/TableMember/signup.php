@@ -45,7 +45,6 @@
          <?php echo $form->textField($model,'mb_name',array('class'=>'form-control','placeholder'=>'ชื่อ - นามสกุล')); ?>
          </div>
        </div>
-
        <div class="form-group">
          <?php //echo $form->labelEx($model,'mb_idcard',array('class'=>'txt1')); ?>
          <?php echo $form->textField($model,'mb_idcard',array('class'=>'form-control','placeholder'=>'หมายเลขบัตรประชาชน','maxlength'=>13)); ?>

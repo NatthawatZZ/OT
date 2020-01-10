@@ -5643,3 +5643,1283 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/OT/index.php?r=site/signup
 ---
+2020/01/09 18:05:13 [error] [exception.ParseError] ParseError: syntax error, unexpected 'px' (T_STRING), expecting ')' in C:\xampp\htdocs\OT\themes\newdemo\views\TableMember\signup.php:64
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('signup', Array, true)
+#3 C:\xampp\htdocs\OT\protected\controllers\TableMemberController.php(102): CController->render('signup', Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TableMemberController->actionCreate()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('TableMember/cre...')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/OT/index.php?r=TableMember/create
+HTTP_REFERER=http://localhost/OT/
+---
+2020/01/10 09:49:16 [error] [exception.CException] CException: คุณสมบัติ "CWebApplication.table_member" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(105): CComponent->__get('table_member')
+#1 C:\xampp\htdocs\OT\protected\models\TableMember.php(99): CModule->__get('table_member')
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): TableMember->beforeSave()
+#3 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#4 C:\xampp\htdocs\OT\protected\controllers\TableMemberController.php(93): CActiveRecord->save()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TableMemberController->actionCreate()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('TableMember/cre...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/OT/index.php?r=TableMember/create
+HTTP_REFERER=http://localhost/OT/index.php?r=TableMember/create
+---
+2020/01/10 10:47:32 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(26): CComponent->__get('email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 10:47:58 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(26): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 10:49:01 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(26): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 10:49:14 [error] [exception.CDbException] CDbException: ตาราง "table_member" ไม่มีฟิลด์ชื่อ "username" อยู่ในตาราง in C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php:697
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1526): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(26): CActiveRecord->findByAttributes(Array)
+#2 C:\xampp\htdocs\OT\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#6 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 10:49:40 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(26): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 10:50:13 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(22): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 10:52:28 [error] [exception.CException] CException: คุณสมบัติ "LoginForm.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\models\LoginForm.php(58): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 10:53:07 [error] [exception.CException] CException: คุณสมบัติ "LoginForm.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\models\LoginForm.php(58): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 10:53:09 [error] [exception.CException] CException: คุณสมบัติ "LoginForm.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\models\LoginForm.php(58): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 10:55:14 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(26): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(51): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:44:03 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(27): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(51): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:44:22 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(27): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(51): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:44:42 [error] [exception.CDbException] CDbException: ตาราง "table_member" ไม่มีฟิลด์ชื่อ "username" อยู่ในตาราง in C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php:697
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1526): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(27): CActiveRecord->findByAttributes(Array)
+#2 C:\xampp\htdocs\OT\protected\models\LoginForm.php(51): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#6 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:45:25 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(27): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(51): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:48:02 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(27): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(51): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:49:35 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(27): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(51): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:51:57 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (109)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 11:52:25 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(27): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:53:40 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(27): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('mb_mobile', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'mb_mobile')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:54:29 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(27): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('mb_mobile', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'mb_mobile')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:54:34 [error] [exception.CException] CException: คุณสมบัติ "UserIdentity.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(27): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('mb_mobile', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'mb_mobile')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 11:58:51 [warning] [application] Failed to set unsafe attribute "mb_email" of "LoginForm".
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (109)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 11:58:51 [warning] [application] Failed to set unsafe attribute "mb_mobile" of "LoginForm".
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (109)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 11:58:51 [error] [exception.CException] CException: คุณสมบัติ "LoginForm.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2760): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2483): CHtml::resolveValue(Object(LoginForm), 'mb_email')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1540): CHtml::activeInputField('text', Object(LoginForm), 'mb_email', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(LoginForm), 'mb_email', Array)
+#4 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(47): CActiveForm->textField(Object(LoginForm), 'mb_email', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#9 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 13:03:43 [error] [exception.CException] CException: คุณสมบัติ "LoginForm.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2760): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2483): CHtml::resolveValue(Object(LoginForm), 'mb_email')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1540): CHtml::activeInputField('text', Object(LoginForm), 'mb_email', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(LoginForm), 'mb_email', Array)
+#4 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(47): CActiveForm->textField(Object(LoginForm), 'mb_email', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#9 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/
+---
+2020/01/10 13:05:10 [error] [exception.CException] CException: คุณสมบัติ "LoginForm.mb_email" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2760): CComponent->__get('mb_email')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2483): CHtml::resolveValue(Object(LoginForm), 'mb_email')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1540): CHtml::activeInputField('text', Object(LoginForm), 'mb_email', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(LoginForm), 'mb_email', Array)
+#4 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(47): CActiveForm->textField(Object(LoginForm), 'mb_email', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#9 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/
+---
+2020/01/10 13:31:35 [error] [php] include(C:\xampp\htdocs\OT\protected/../themes/demo/inc/inc-css-home.php): failed to open stream: No such file or directory (C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): HomeController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): HomeController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): HomeController->renderPartial()
+#3 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(7): HomeController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): HomeController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HomeController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=home/index
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (12)
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (12)
+in C:\xampp\htdocs\OT\protected\controllers\HomeController.php (7)
+2020/01/10 13:31:44 [error] [php] include(C:\xampp\htdocs\OT\protected/../themes/newdemo/inc/inc-css-home.php): failed to open stream: No such file or directory (C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): HomeController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): HomeController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): HomeController->renderPartial()
+#3 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(7): HomeController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): HomeController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HomeController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=home/index
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (12)
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (12)
+in C:\xampp\htdocs\OT\protected\controllers\HomeController.php (7)
+2020/01/10 13:32:31 [error] [php] Undefined variable: content (C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php:47)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): HomeController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): HomeController->renderPartial()
+#2 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(7): HomeController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): HomeController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HomeController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=home/index
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (47)
+in C:\xampp\htdocs\OT\protected\controllers\HomeController.php (7)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 14:33:25 [error] [php] include(C:\xampp\htdocs\OT\protected/../themes/quixlab/include/inc.php): failed to open stream: No such file or directory (C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php:13)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): HomeController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): HomeController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): HomeController->renderPartial()
+#3 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(7): HomeController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): HomeController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HomeController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=home/index
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (13)
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (13)
+in C:\xampp\htdocs\OT\protected\controllers\HomeController.php (7)
+2020/01/10 14:34:23 [error] [php] include(C:\xampp\htdocs\OT\protected/../themes/quixlab/include/inc.php): failed to open stream: No such file or directory (C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php:13)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): HomeController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): HomeController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): HomeController->renderPartial()
+#3 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(7): HomeController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): HomeController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HomeController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=home/index
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (13)
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (13)
+in C:\xampp\htdocs\OT\protected\controllers\HomeController.php (7)
+2020/01/10 14:35:30 [error] [php] include(C:\xampp\htdocs\OT\protected/../themes/quixlab/include/inc.php): failed to open stream: No such file or directory (C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php:13)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): HomeController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): HomeController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): HomeController->renderPartial()
+#3 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(7): HomeController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): HomeController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HomeController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=home/index
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (13)
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (13)
+in C:\xampp\htdocs\OT\protected\controllers\HomeController.php (7)
+2020/01/10 14:40:48 [error] [php] Undefined variable: content (C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php:139)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): HomeController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): HomeController->renderPartial()
+#2 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(7): HomeController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): HomeController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HomeController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=home/index
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (139)
+in C:\xampp\htdocs\OT\protected\controllers\HomeController.php (7)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 14:40:49 [error] [php] Undefined variable: content (C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php:139)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): HomeController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): HomeController->renderPartial()
+#2 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(7): HomeController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): HomeController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HomeController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=home/index
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (139)
+in C:\xampp\htdocs\OT\protected\controllers\HomeController.php (7)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 14:40:49 [error] [php] Undefined variable: content (C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php:139)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): HomeController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): HomeController->renderPartial()
+#2 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(7): HomeController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): HomeController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HomeController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=home/index
+in C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php (139)
+in C:\xampp\htdocs\OT\protected\controllers\HomeController.php (7)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 15:30:57 [error] [exception.CException] CException: CActiveForm and its behaviors do not have a method or closure named "textFieldGroup". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(51): CComponent->__call('textFieldGroup', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/
+---
+2020/01/10 15:31:20 [error] [exception.CException] CException: CActiveForm and its behaviors do not have a method or closure named "textFieldGroup". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(51): CComponent->__call('textFieldGroup', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/
+---
+2020/01/10 15:32:12 [error] [exception.ParseError] ParseError: syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php:51
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#3 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/
+---
+2020/01/10 15:38:19 [error] [exception.CException] CException: CActiveForm and its behaviors do not have a method or closure named "textFieldGroup". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(51): CComponent->__call('textFieldGroup', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+---
+2020/01/10 15:38:33 [error] [exception.CException] CException: CActiveForm and its behaviors do not have a method or closure named "textFieldRow". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(51): CComponent->__call('textFieldRow', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+---
+2020/01/10 15:40:43 [error] [exception.ParseError] ParseError: syntax error, unexpected 'array' (T_ARRAY), expecting ',' or ')' in C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php:51
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#3 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+---
+2020/01/10 15:40:50 [error] [exception.ParseError] ParseError: syntax error, unexpected 'array' (T_ARRAY), expecting ',' or ')' in C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php:51
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#3 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+---
+2020/01/10 15:40:51 [error] [exception.ParseError] ParseError: syntax error, unexpected 'array' (T_ARRAY), expecting ',' or ')' in C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php:51
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#3 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+---
+2020/01/10 15:41:07 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2486): tag()
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1540): activeInputField()
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): activeTextField()
+#4 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(51): CActiveForm->textField()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#9 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): SiteController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=site/login
+in C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php (51)
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (116)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 15:41:37 [error] [exception.CException] CException: CActiveForm and its behaviors do not have a method or closure named "textFieldGroup". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(51): CComponent->__call('textFieldGroup', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+---
+2020/01/10 15:43:24 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2486): tag()
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1540): activeInputField()
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): activeTextField()
+#4 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(51): CActiveForm->textField()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#9 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): SiteController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=site/login
+in C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php (51)
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (116)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 15:43:25 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2486): tag()
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1540): activeInputField()
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): activeTextField()
+#4 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(51): CActiveForm->textField()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#9 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): SiteController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=site/login
+in C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php (51)
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (116)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 15:43:25 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2486): tag()
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1540): activeInputField()
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): activeTextField()
+#4 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(51): CActiveForm->textField()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#9 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): SiteController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=site/login
+in C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php (51)
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (116)
+in C:\xampp\htdocs\OT\index.php (13)
+2020/01/10 16:07:30 [error] [exception.CException] CException: คุณสมบัติ "CActiveForm.size" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('size', 40)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'CActiveForm', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(198): CBaseController->createWidget('CActiveForm', Array)
+#3 C:\xampp\htdocs\OT\themes\newdemo\views\site\login.php(42): CBaseController->beginWidget('CActiveForm', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('login', Array, true)
+#8 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(116): CController->render('login', Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/
+---
+2020/01/10 16:39:46 [error] [exception.Error] Error: Call to undefined function SendSuccess() in C:\xampp\htdocs\OT\themes\newdemo\views\TableMember\signup.php:26
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('signup', Array, true)
+#4 C:\xampp\htdocs\OT\protected\controllers\TableMemberController.php(120): CController->render('signup', Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TableMemberController->actionCreate()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('TableMember/cre...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/OT/index.php?r=TableMember/create
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 16:54:05 [error] [exception.Error] Error: Undefined class constant 'ERROR_PASSWORD_INVALLD' in C:\xampp\htdocs\OT\protected\components\UserIdentity.php:25
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\models\LoginForm.php(53): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 16:56:56 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\OT\protected\components\UserIdentity.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): LoginForm->validate()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=site/login
+in C:\xampp\htdocs\OT\protected\components\UserIdentity.php (24)
+in C:\xampp\htdocs\OT\protected\models\LoginForm.php (53)
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (111)
+2020/01/10 16:58:35 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\OT\protected\components\UserIdentity.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): LoginForm->validate()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=site/login
+in C:\xampp\htdocs\OT\protected\components\UserIdentity.php (24)
+in C:\xampp\htdocs\OT\protected\models\LoginForm.php (53)
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (111)
+2020/01/10 16:59:43 [error] [exception.CException] CException: คุณสมบัติ "TableMember.psn_per_id" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('psn_per_id')
+#1 C:\xampp\htdocs\OT\protected\components\UserIdentity.php(24): CActiveRecord->__get('psn_per_id')
+#2 C:\xampp\htdocs\OT\protected\models\LoginForm.php(53): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#6 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 17:00:16 [error] [php] Illegal string offset 'psn_per_id' (C:\xampp\htdocs\OT\protected\components\UserIdentity.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): LoginForm->validate()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=site/login
+in C:\xampp\htdocs\OT\protected\components\UserIdentity.php (24)
+in C:\xampp\htdocs\OT\protected\models\LoginForm.php (53)
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (111)
+2020/01/10 17:00:37 [error] [exception.ParseError] ParseError: syntax error, unexpected '[', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in C:\xampp\htdocs\OT\protected\components\UserIdentity.php:24
+Stack trace:
+#0 [internal function]: YiiBase::autoload('UserIdentity')
+#1 C:\xampp\htdocs\OT\protected\models\LoginForm.php(52): spl_autoload_call('UserIdentity')
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 17:01:06 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\OT\protected\components\UserIdentity.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): LoginForm->validate()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\OT\index.php(13): CWebApplication->run()
+REQUEST_URI=/OT/index.php?r=site/login
+in C:\xampp\htdocs\OT\protected\components\UserIdentity.php (24)
+in C:\xampp\htdocs\OT\protected\models\LoginForm.php (53)
+in C:\xampp\htdocs\OT\protected\controllers\SiteController.php (111)
+2020/01/10 17:01:29 [error] [exception.Error] Error: Undefined class constant 'ERROR_PASSWORD_INVALLD' in C:\xampp\htdocs\OT\protected\components\UserIdentity.php:25
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\models\LoginForm.php(53): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 17:06:30 [error] [exception.CException] CException: คุณสมบัติ "CWebApplication.tableMember" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(105): CComponent->__get('tableMember')
+#1 C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php(8): CModule->__get('tableMember')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#6 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(8): CController->render('index')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/OT/index.php?r=home/index
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 17:13:42 [error] [exception.Error] Error: Undefined class constant 'ERROR_USERNAME_INVALLD' in C:\xampp\htdocs\OT\protected\components\UserIdentity.php:23
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\models\LoginForm.php(53): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 17:17:53 [error] [exception.Error] Error: Undefined class constant 'ERROR_USERNAME_INVALLD' in C:\xampp\htdocs\OT\protected\components\UserIdentity.php:23
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\models\LoginForm.php(53): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 17:18:01 [error] [exception.Error] Error: Undefined class constant 'ERROR_USERNAME_INVALLD' in C:\xampp\htdocs\OT\protected\components\UserIdentity.php:23
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\models\LoginForm.php(53): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 17:18:14 [error] [exception.Error] Error: Undefined class constant 'ERROR_USERNAME_INVALLD' in C:\xampp\htdocs\OT\protected\components\UserIdentity.php:23
+Stack trace:
+#0 C:\xampp\htdocs\OT\protected\models\LoginForm.php(53): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\OT\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/OT/index.php?r=site/login
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 17:20:59 [error] [exception.CException] CException: คุณสมบัติ "CWebUser.mb_name" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('mb_name')
+#1 C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php(8): CWebUser->__get('mb_name')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#6 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(8): CController->render('index')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/OT/index.php?r=home/index
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---
+2020/01/10 17:21:07 [error] [exception.CException] CException: คุณสมบัติ "CWebApplication.mb_id" ยังไม่ถูกกำหนด in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(105): CComponent->__get('mb_id')
+#1 C:\xampp\htdocs\OT\themes\newdemo\views\home\index.php(8): CModule->__get('mb_id')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('index', NULL, true)
+#6 C:\xampp\htdocs\OT\protected\controllers\HomeController.php(8): CController->render('index')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\OT\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/OT/index.php?r=home/index
+HTTP_REFERER=http://localhost/OT/index.php?r=site/login
+---

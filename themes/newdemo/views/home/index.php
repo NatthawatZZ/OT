@@ -1,3 +1,11 @@
+<style >
+  .container-fluid{
+    font-family: 'Kanit';
+  }
+	a{
+		color:#000;
+	}
+</style>
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -11,21 +19,18 @@
 		</div>
 	</div>
 </nav>
-
 <body>
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
 					<br><br><br><br>
           <ul class="nav nav-sidebar">
-            <li><a href="">แบบคำขอเบิกค่าOT</a></li>
-            <li><a href="">แบบคำขอเบิกค่าเดินทาง</a></li>
-            <li><a href="">รายงาน</a></li>
+            <li><a href=""><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/edit.png'?>"  height="20">แบบคำขอเบิกค่าOT</a></li>
+            <li><a href=""><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/car (1).png'?>"  height="20">แบบคำขอเบิกค่าเดินทาง</a></li>
+            <li><a href=""><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/edit.png'?>"  height="20">รายงาน</a></li>
           </ul>
         </div>
 
       </div>
     </div>
-
-
 </body>

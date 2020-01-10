@@ -91,7 +91,8 @@ class TableMemberController extends Controller
 		  $model->attributes=$_POST['TableMember'];
 		}
 		if($model->save())
-		$this->redirect(array('view','id'=>$model->mb_id));
+		// $this->redirect(array('view','id'=>$model->mb_id));
+		$this->redirect(array('site/login'));
 
 		$position = MasterPosition::model()->findAll(array('order'=>'pst_id ASC'));
 		$employ = TablePersonnel::model()->findAll(array('order'=>'psn_per_id ASC'));

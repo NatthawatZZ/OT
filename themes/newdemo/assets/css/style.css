@@ -420,7 +420,7 @@ a:hover {
 
 .navbar-b.navbar-trans .nav-link,
 .navbar-b.navbar-reduce .nav-link {
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -459,23 +459,23 @@ a:hover {
 }
 
 .navbar-b.navbar-trans .nav-link:before {
-  background-color: #fff;
+  background-color: #000;
 }
 
 .navbar-b.navbar-trans .nav-link:hover {
-  color: #fff;
+  color: #000;
 }
 
 .navbar-b.navbar-trans .show > .nav-link,
 .navbar-b.navbar-trans .active > .nav-link,
 .navbar-b.navbar-trans .nav-link.show,
 .navbar-b.navbar-trans .nav-link.active {
-  color: #fff;
+  color: #000;
 }
 
 .navbar-b.navbar-reduce {
   transition: all .5s ease-in-out;
-  background-color: #fff;
+  background-color: #000;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -508,7 +508,7 @@ a:hover {
 }
 
 .navbar-b .navbar-brand {
-  color: #fff;
+  color: #000;
   font-size: 1.6rem;
   font-weight: 600;
 }
@@ -603,7 +603,7 @@ a:hover {
 .intro {
   height: 100vh;
   position: relative;
-  color: #fff;
+  color: #000;
 }
 
 .intro .intro-content {
@@ -623,7 +623,7 @@ a:hover {
 }
 
 .intro .intro-title {
-  color: #fff;
+  color: #000;
   font-weight: 600;
   font-size: 3rem;
 }

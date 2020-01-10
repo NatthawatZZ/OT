@@ -84,8 +84,8 @@ class TableMember extends CActiveRecord
 			'mb_mobile' => 'หมายเลขโทรศัพท์มือถือ	',
 			'mb_email' => 'อีเมลล์	',
 			'pst_id' => 'ตำแหน่ง',
-			'created_date' => 'Created Date',
-			'created_by' => 'Created By',
+			'created_date' => 'วันที่สมัคร',
+			'created_by' => 'คนที่สมัคร',
 			'update_date' => 'Update Date',
 			'update_by' => 'Update By',
 			'active' => 'Active',
@@ -96,7 +96,7 @@ class TableMember extends CActiveRecord
 			if($this->isNewRecord)
 			{
 					$this->created_date=new CDbExpression('NOW()');
-					//$this->created_by=Yii::app()->table_member->mb_id;
+					$this->created_by=Yii::app()->table_member->mb_id;
 			}else{
 				$this->update_date=new CDbExpression('NOW()');
 			//	$this->update_by=Yii::app()->table_member->mb_id;

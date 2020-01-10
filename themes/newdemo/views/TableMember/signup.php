@@ -1,7 +1,7 @@
 <style >
   .container-fluid{
     font-family: 'Kanit';
-    font-size: 60px;
+    font-size: 30px;
   }
 .form-control{
 

@@ -1,71 +1,125 @@
-<style >
-  ::placeholder{
-    opacity: 50%;
-  }
-</style>
-<?php  $nav1=""; ?>
-<?php  $nav2=""; ?>
-<?php  $nav3=""; ?>
-<?php include Yii::app()->basePath .'/../themes/newdemo/include/inc-header.php'; ?>
+<?php
+/* @var $this SiteController */
+/* @var $model LoginForm */
+/* @var $form CActiveForm  */
 
-<?php include Yii::app()->basePath . '/../themes/newdemo/include/inc.php'; ?>
-<?php include Yii::app()->basePath . '/../themes/newdemo/include/inc-css.php'; ?>
-<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+?>
+  <?php include Yii::app()->basePath .'/../themes/newdemo/inc/inc-css.php'; ?>
+  <?php //include Yii::app()->basePath .'/../themes/newdemo/include/inc-css.php'; ?>
+  <?php include Yii::app()->basePath .'/../themes/newdemo/inc/inc-js.php'; ?>
+  <center><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/logo1.png'?>" width="270" height="78"></center>
+    <div class="container-fluid">
 
-                <body>
-                	<div class="limiter">
-                    <div id="home" class="intro route bg-image" style="background-image: url(<?php echo Yii::app()->theme->baseUrl.'/assets/img/intro-bg.jpg'?>)">
-                      <div class="container-login100">
-                      <div class="overlay-itro"></div>
-                      <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-                				<form class="login100-form validate-form flex-sb flex-w">
-                					<span class="login100-form-title p-b-40">
-                						เข้าสู่ระบบ
-                					</span>
-                					<div class="p-t-31 p-b-9">
-                						<span class="txt1">
-                							รหัสพนักงาน
-                						</span>
-                					</div>
-                					<div class="wrap-input100 validate-input" data-validate = "Username is required">
-                						<input class="input100" type="text" name="username" placeholder="รหัสพนักงาน">
-                						<span class="focus-input100"></span>
-                					</div>
+        <div class="row" id="login">
+          <div class="col-md-4">
+              </div>
+              <div class="col-md-4">
+          <h1>เข้าสู่ระบบ</h1>
+          </div>
+          <div class="col-md-4">
 
-                					<div class="p-t-13 p-b-9">
-                						<span class="txt1">
-                							รหัสผ่าน
-                						</span>
+          </div>
+        </div>
+
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+    <br>
 
 
-                					</div>
-                					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-                						<input class="input100" type="password" name="pass" placeholder="รหัสผ่าน">
-                						<span class="focus-input100"></span>
-                					</div>
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'login-form',
+	'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+	),
+)); ?>
 
-                					<div class="container-login100-form-btn m-t-30">
-                						<button class="login100-form-btn">
-                						เข้าสู่ระบบ
-                						</button>
-                					</div>
+	<div class="form-group">
+		<?php //echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->textField($model,'username',array('class'=>'form-control','placeholder'=>'Email')); ?>
+		<?php //echo $form->error($model,'username'); ?>
+	</div>
 
-                					<div class="w-full text-center p-t-55">
-                            <a href="index.php?r=site/forgot" class="txt2 bo1 m-l-5">
-                              ลืมหรัสผ่าน?
-                            </a>
-                						<span class="txt2">
-                							&nbsp;&nbsp;
-                						</span>
-                						<a href="index.php?r=TableMember/index" class="txt2 bo1">
-                							ลงทะเบียน
-                						</a>
-                					</div>
-                				</form>
-                			</div>
-                		</div>
-                  </div>
-                	</div>
+	<div class="form-group">
+		<?php //echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->passwordField($model,'password',array('class'=>'form-control','placeholder'=>'Password')); ?>
+		<?php //echo $form->error($model,'password'); ?>
+		<!-- <p class="hint">
+			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
+		</p> -->
+	</div>
+
+	<div class="row rememberMe">
+		<?php echo $form->checkBox($model,'rememberMe'); ?>
+		<?php echo $form->label($model,'rememberMe'); ?>
+		<?php echo $form->error($model,'rememberMe'); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('เข้าสู่ระบบ',array('class'=>'btn btn-block')); ?>
+	</div>
+  <p>สมาชิกใหม่?
+    <a href="signup.html">ลงทะเบียน</a> <br>
+    <!-- คลิกเพื่อสมัคร -->
+    <a href="#">ลืมรหัสผ่าน?</a>
+  </p>
 
 
-                	<div id="dropDownSelect1"></div>
+<?php $this->endWidget(); ?>
+</div><!-- form -->
+
+<div class="col-md-4">
+</div>
+</div><!-- ------- end row id login -------- -->
+</div><!-- ------- end class container-fluid -------- -->
+
+<br><br>
+  <center><img src="image/logo1.png" width="270" height="78"></center>
+  <div class="container-fluid">
+
+    <div class="row" id="login">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4">
+        <h1>เข้าสู่ระบบ</h1>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+        <br>
+
+        <form action="#" method="POST">
+          <div class="form-group">
+            <!-- <label for="exampleInputEmail1">Email / User name</label> -->
+            <input type="email" class="form-control" id="psn_id" aria-describedby="emailHelp" placeholder="อีเมลล์">
+
+          </div>
+          <div class="form-group">
+            <!-- <label for="exampleInputPassword1">Password</label> -->
+            <input type="password" class="form-control" id="mb_idcard" placeholder="รหัสผ่าน"><!-- ยังไม่กำหนดตัวเลขที่จะใส่,ตัวเลขเท่านั้น หรือตัวอักษรด้วย? -->
+          </div>
+
+
+          <button type="submit" class="btn btn-block" >เข้าสู่ระบบ</button>
+          <p>สมาชิกใหม่?
+            <a href="signup.html">ลงทะเบียน</a> <br>
+            <!-- คลิกเพื่อสมัคร -->
+            <a href="#">ลืมรหัสผ่าน?</a>
+          </p>
+
+        </form>
+
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div><!-- ------- end row id login -------- -->
+  </div><!-- ------- end class container-fluid -------- -->

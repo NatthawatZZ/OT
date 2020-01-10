@@ -96,7 +96,7 @@ class TableMember extends CActiveRecord
 			if($this->isNewRecord)
 			{
 					$this->created_date=new CDbExpression('NOW()');
-					$this->created_by=Yii::app()->table_member->mb_id;
+					//$this->created_by=Yii::app()->table_member->mb_id;
 			}else{
 				$this->update_date=new CDbExpression('NOW()');
 			//	$this->update_by=Yii::app()->table_member->mb_id;

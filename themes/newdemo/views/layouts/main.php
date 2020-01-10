@@ -4,7 +4,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BWS</title>
   <?php include Yii::app()->basePath .'/../themes/newdemo/inc/inc-css.php'; ?>
-  <?php include Yii::app()->basePath .'/../themes/newdemo/include/inc-css.php'; ?>
   <?php include Yii::app()->basePath .'/../themes/newdemo/inc/inc-js.php'; ?>
 </head>
 

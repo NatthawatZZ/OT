@@ -3,9 +3,6 @@
     font-family: 'Kanit';
     font-size: 30px;
   }
-.form-control{
-
-}
 </style>
    <div class="container-fluid">
      <div class="row" id="signup">

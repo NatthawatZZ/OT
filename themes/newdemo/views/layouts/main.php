@@ -34,7 +34,7 @@
   		</div>
   	</div>
   </nav>
-    <div class="container-fluid">
+    <div class="container-fluid fixed">
       <div class="row">
         <div class="col-sm-3 col-md-2 ">
 					<br><br><br><br>

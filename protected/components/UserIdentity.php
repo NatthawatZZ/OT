@@ -15,7 +15,7 @@ class UserIdentity extends CUserIdentity
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
 	 */
-	// private $_id;
+	 private $_id;
 	public function authenticate()
 	{
 		$user = TableMember::model()->findByAttributes(array('mb_email'=>$this->username));
@@ -25,12 +25,29 @@ class UserIdentity extends CUserIdentity
 			$this->errorCode=self::ERROR_PASSWORD_INVALLD;
 		}else{
 			$this->errorCode=self::ERROR_NONE;
-		//	$this->_id = $user->id;
+			$this->_id = $user->mb_id;
 		}
 		return !$this->errorCode;
 
 	}
-	// public function getId(){
-	// 	return $this->_id;
-	// }
+
+	// public function authenticate()
+	// 	{
+	// 		$user = TableMember::model()->findByAttributes(array('mb_email'=>$this->username));
+	// 		$userpass = TablePersonnel::model()->findByPk(array('psn_per_id'=>$this->password));
+	// 		if($user === null){
+	// 			$this->errorCode = self::ERROR_USERNAME_INVALLD;
+	// 		}else if($userpass->psn_per_id != $this->password){
+	// 			$this->errorCode=self::ERROR_PASSWORD_INVALLD;
+	// 		}else{
+	// 			$this->errorCode=self::ERROR_NONE;
+	// 		//	$this->_id = $user->id;
+	// 		}
+	// 		return !$this->errorCode;
+	//
+	// 	}
+
+	public function getId(){
+		return $this->_id;
+	}
 }

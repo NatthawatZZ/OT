@@ -45,6 +45,9 @@ class TableMember extends CActiveRecord
 			array('psn_id, pst_id, active , mb_idcard,mb_name ,mb_email ,mb_mobile ', 'required'),
 			array('psn_id, mb_idcard, pst_id, created_by, update_by', 'numerical', 'integerOnly'=>true),
 			array('mb_title', 'length', 'max'=>18),
+			array('mb_email', 'unique'), // ห้ามซ้ำ
+			array('mb_mobile', 'unique'), // ห้ามซ้ำ
+			array('mb_idcard', 'unique'), // ห้ามซ้ำ
 			array('mb_name, mb_email', 'length', 'max'=>255),
 			array('mb_mobile', 'length', 'max'=>12),
 			array('active', 'length', 'max'=>1),

@@ -5,11 +5,17 @@ class HomeController extends Controller
 	public function actionIndex()
 	{
 	$this->layout='main';
-		$member = TableMember::model()->findByPk(array('order'=>'mb_id ASC'));
-		$this->render('index',array(
-			'member'=>$member,));
+
+		$this->render('index');
 
 	}
+	public function actionOt()
+	{
+		$this->layout='main';
+		$this->render('ot');
+
+	}
+
 
 	// Uncomment the following methods and override them if needed
 	/*

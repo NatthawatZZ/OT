@@ -84,7 +84,7 @@ class TableMemberController extends Controller
 	 */
 	public function actionCreate()
 	{
-		// $this->layout = false;
+		$this->layout = 'column1';
 		$model=new TableMember;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

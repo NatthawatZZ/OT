@@ -1,9 +1,9 @@
 <style >
   .container-fluid{
     font-family: 'Kanit';
-
   }
 </style>
+
 <div class="container">
   <div id="home" class="intro route bg-image"style="background-image: url(#fff)">
   <br><br><center><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/logo1.png'?>" width="270" height="78"></center>

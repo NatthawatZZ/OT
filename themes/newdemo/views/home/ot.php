@@ -13,7 +13,6 @@
       <h2>ใบเบิกค่าทำงานล่วงเวลา/ค่าคอมมิชชั่น</h2>
 </div>
 <div class="container-fluid">
-
   <div class="content">
     <div class="well">
       <div class="row">
@@ -24,10 +23,10 @@
               <div class="row">
                 <div class="col-md-8 ">
                   <div class="form-group">
-                    <h4>Name</h4>
+                    <h4><?php echo Yii::app()->user->name ;?></h4>
                   </div>
                   <div class="form-group">
-                  <p>วันที่</p>
+                  <p><?php echo date('d-m-Y');?></p>
                   </div>
                   <div class="form-check">
                     <label>ขอเบิกค่า</label><br/>
@@ -58,13 +57,46 @@
                       'booster.widgets.TbDatePicker',
                       array(
                           'name' => 'some_date',
-                          'options' => array(
+                            'options' => array(
                               'language' => 'th',
+				                         'prepend' => '<i class="glyphicon glyphicon-calendar"></i>'
                           )
                       )
                     );
                      ?>
                   </div>
+                  <div class="form-group">
+                    <label class="control-label">ตั้งแต่เวลา</label><br>
+                    <?php $this->widget(
+                         'booster.widgets.TbTimePicker',
+                         array(
+                             'name' => 'begin',
+                             'value' => '00:00 น.',
+                             'noAppend' => true, // mandatory
+                             'options' => array(
+                                 'disableFocus' => true, // mandatory
+                                 'showMeridian' => false // irrelevant
+                             ),
+                             'wrapperHtmlOptions' => array('class' => 'col-md-3'),
+                         )
+                      ); ?>
+                  </div><br>
+                  <div class="form-group">
+                    <label class="control-label">ถึง</label><br>
+                    <?php $this->widget(
+                         'booster.widgets.TbTimePicker',
+                         array(
+                             'name' => 'end',
+                             'value' => '00:00 น.',
+                             'noAppend' => true, // mandatory
+                             'options' => array(
+                                 'disableFocus' => true, // mandatory
+                                 'showMeridian' => false // irrelevant
+                             ),
+                             'wrapperHtmlOptions' => array('class' => 'col-md-3'),
+                         )
+                      ); ?>
+                  </div><br><br>
                   <div class="form-group">
                     <label for="comment">งานที่ได้รับมอบหมาย</label>&nbsp;
                     <input type="text" placeholder="ระบุ...">
@@ -74,6 +106,7 @@
                     <input type="text" value="0.00" disabled>
                     <label for="comment">บาท</label>&nbsp;
                   </div>
+              
                 </div>
               </div>
             </div><br>

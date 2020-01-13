@@ -6,7 +6,7 @@
 
 <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand js-scroll" href="index.php" style="font-size:24px;">OT Bangkok Web Solutions</a>
+    <a class="navbar-brand js-scroll" href="index.php" style="font-size:24px;"><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/logo1.png'?>"  height="48"></a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
       aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span></span>

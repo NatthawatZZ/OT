@@ -14,7 +14,7 @@
   <nav class="navbar navbar-default navbar-fixed-top">
   	<div class="container-fluid">
   		<div class="navbar-header">
-  			<a class="navbar-brand" href="index.php?r=home/index"><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/logo1.png'?>"  height="32"></a>
+  			<a class="navbar-brand" href="index.php?r=home/index"><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/logo1.png'?>"  height="32" style="margin-left:20px;"></a>
   		</div>
   		<div id="navbar" class="navbar-collapse collapse">
   			<ul class="nav navbar-nav navbar-right">

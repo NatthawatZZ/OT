@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2020 at 10:44 AM
+-- Generation Time: Jan 13, 2020 at 11:16 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -72,7 +72,7 @@ INSERT INTO `master_position` (`pst_id`, `pst_name`, `created_date`, `created_by
 (37, ' โปรแกรมเมอร์อาวุโส', '2020-01-08 14:48:10', NULL, '2020-01-08 14:48:12', NULL, 'y'),
 (38, ' โปรแกรมเมอร์', '2020-01-08 14:48:32', NULL, '2020-01-08 14:48:34', NULL, 'y'),
 (39, 'นักพัฒนาเว็บ', '2020-01-08 14:48:51', NULL, '2020-01-08 14:48:53', NULL, 'y'),
-(40, 'ผู้สื่อสาร', '2020-01-08 14:49:08', NULL, '2020-01-08 14:49:10', NULL, '');
+(40, 'ผู้สื่อสาร', '2020-01-08 14:49:08', NULL, '2020-01-13 14:49:10', NULL, 'y');
 
 -- --------------------------------------------------------
 
@@ -83,15 +83,15 @@ INSERT INTO `master_position` (`pst_id`, `pst_name`, `created_date`, `created_by
 CREATE TABLE `table_member` (
   `mb_id` int(4) NOT NULL COMMENT 'รหัสสมาชิก',
   `psn_id` int(4) NOT NULL COMMENT 'รหัส id พนักงาน\n',
-  `mb_title` enum('นาย','นาง','นางสาว') COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'คำนำหน้า',
-  `mb_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'ชื่อ-นามสกุล',
-  `mb_idcard` int(13) DEFAULT NULL COMMENT 'หมายเลขบัตรประชาชน\n',
-  `mb_mobile` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'หมายเลขโทรศัพท์มือถือ',
-  `mb_email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'อีเมล',
+  `mb_title` enum('นาย','นาง','นางสาว','ศาสตราจารย์','ผู้ช่วยศาสตราจารย์','รองศาสตราจารย์') COLLATE utf8_unicode_ci NOT NULL COMMENT 'คำนำหน้า',
+  `mb_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'ชื่อ-นามสกุล',
+  `mb_idcard` int(13) NOT NULL COMMENT 'หมายเลขบัตรประชาชน',
+  `mb_mobile` varchar(12) COLLATE utf8_unicode_ci NOT NULL COMMENT 'หมายเลขโทรศัพท์มือถือ',
+  `mb_email` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'อีเมล',
   `pst_id` int(2) NOT NULL COMMENT 'รหัสตำแหน่ง\n',
-  `created_date` datetime DEFAULT NULL COMMENT 'วันที่สร้าง\n',
+  `created_date` datetime DEFAULT NULL COMMENT 'วันที่สร้าง',
   `created_by` int(11) DEFAULT NULL COMMENT 'คนที่สร้าง',
-  `update_date` datetime DEFAULT NULL COMMENT 'วันที่อัพเดท\n',
+  `update_date` date DEFAULT NULL COMMENT 'วันที่อัพเดท\n',
   `update_by` int(11) DEFAULT NULL COMMENT 'คนที่อัพเดท',
   `active` char(1) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='<double-click to overwrite multiple objects>';
@@ -101,10 +101,11 @@ CREATE TABLE `table_member` (
 --
 
 INSERT INTO `table_member` (`mb_id`, `psn_id`, `mb_title`, `mb_name`, `mb_idcard`, `mb_mobile`, `mb_email`, `pst_id`, `created_date`, `created_by`, `update_date`, `update_by`, `active`) VALUES
-(29, 1, 'นาง', 'เทส ทดสอบ', 123456789, '0123456789', 'sss@asd.com', 35, '0000-00-00 00:00:00', NULL, '0000-00-00 00:00:00', NULL, 'y'),
-(30, 1, 'นางสาว', 'เอ  นามสมมติ', 2147483647, '1110000', 'dd@dd.com', 35, '0000-00-00 00:00:00', NULL, '0000-00-00 00:00:00', NULL, 'y'),
-(31, 1, 'นาย', 'Donal Trump', 2147483647, '', '', 28, '0000-00-00 00:00:00', NULL, '0000-00-00 00:00:00', NULL, 'y'),
-(32, 1, 'นาย', 'Donal Trump', 2147483647, '088884131321', 'sada@asdasd.cc', 28, '0000-00-00 00:00:00', NULL, '0000-00-00 00:00:00', NULL, 'y');
+(53, 2, 'นางสาว', 'เอ นามสมมติ', 2147483647, '0833120011', 'test@mail.com', 33, '2020-01-09 16:45:56', NULL, '0000-00-00', NULL, 'y'),
+(55, 2, 'รองศาสตราจารย์', 'บี นามสมมติ', 2147483647, '0123456967', 'Bee@mail.com', 35, '2020-01-09 17:20:26', NULL, '0000-00-00', NULL, 'y'),
+(61, 3, 'นาย', 'โดนัท นัทโด', 2147483647, '0987654321', 'leodonut28@gmail.com', 34, '2020-01-10 16:51:21', NULL, NULL, NULL, 'y'),
+(62, 2, 'ศาสตราจารย์', 'ทดสอบ ทดสอบ', 2147483647, '0123456789', 'test@gmail.com', 37, '2020-01-13 11:53:31', NULL, NULL, NULL, 'y'),
+(63, 2, 'ศาสตราจารย์', 'asd fffa', 2147483647, '0132656565', 'onut28@gmail.com', 33, '2020-01-13 16:58:24', NULL, NULL, NULL, 'y');
 
 -- --------------------------------------------------------
 
@@ -136,7 +137,7 @@ CREATE TABLE `table_ot` (
 
 CREATE TABLE `table_personnel` (
   `psn_id` int(4) NOT NULL COMMENT 'รหัส id พนักงาน\n',
-  `psn_per_id` int(4) DEFAULT NULL COMMENT 'รหัสพนักงาน\n',
+  `psn_per_id` varchar(4) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'รหัสพนักงาน',
   `created_date` datetime DEFAULT NULL COMMENT 'วันที่สร้าง\n',
   `created_by` int(11) DEFAULT NULL COMMENT 'คนที่สร้าง\n',
   `update_date` datetime DEFAULT NULL COMMENT 'วันที่อัพเดท\n',
@@ -149,7 +150,9 @@ CREATE TABLE `table_personnel` (
 --
 
 INSERT INTO `table_personnel` (`psn_id`, `psn_per_id`, `created_date`, `created_by`, `update_date`, `update_by`, `active`) VALUES
-(1, 1234, '2020-01-01 00:00:00', NULL, '2020-01-01 00:00:00', NULL, 'a');
+(1, '0001', '2020-01-01 00:00:00', NULL, '2020-01-01 00:00:00', NULL, 'a'),
+(2, '0002', '2020-01-09 10:28:16', NULL, '2020-01-09 10:28:19', NULL, 'a'),
+(3, '0003', '2020-01-09 10:28:51', NULL, '2020-01-09 10:28:54', NULL, 'a');
 
 -- --------------------------------------------------------
 
@@ -235,13 +238,13 @@ ALTER TABLE `master_position`
 -- AUTO_INCREMENT for table `table_member`
 --
 ALTER TABLE `table_member`
-  MODIFY `mb_id` int(4) NOT NULL AUTO_INCREMENT COMMENT 'รหัสสมาชิก', AUTO_INCREMENT=33;
+  MODIFY `mb_id` int(4) NOT NULL AUTO_INCREMENT COMMENT 'รหัสสมาชิก', AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `table_personnel`
 --
 ALTER TABLE `table_personnel`
-  MODIFY `psn_id` int(4) NOT NULL AUTO_INCREMENT COMMENT 'รหัส id พนักงาน\n', AUTO_INCREMENT=2;
+  MODIFY `psn_id` int(4) NOT NULL AUTO_INCREMENT COMMENT 'รหัส id พนักงาน\n', AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

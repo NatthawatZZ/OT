@@ -4,7 +4,7 @@ class HomeController extends Controller
 {
 	public function actionIndex()
 	{
-	$this->layout=false;
+	$this->layout='main';
 		$member = TableMember::model()->findByPk(array('order'=>'mb_id ASC'));
 		$this->render('index',array(
 			'member'=>$member,));

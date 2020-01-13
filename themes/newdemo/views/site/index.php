@@ -12,7 +12,7 @@
 <?php include Yii::app()->basePath .'/../themes/newdemo/include/inc-header.php'; ?>
   <div class="container">
     <div id="home" class="intro route bg-image"style="background-image: url(#fff)">
-    <br><br><center><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/logo1.png'?>" width="270" height="78"></center>
+    <!-- <br><br><center><img src="<?php //echo Yii::app()->theme->baseUrl.'/inc/image/logo1.png'?>" width="270" height="78"></center> -->
       <div class="intro-content display-table">
         <div class="table-cell">
           <h1 class="intro-title mb-4">OT BANGKOK WEB SOLUTIONS</h1>

@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'table_member':
  * @property integer $mb_id
  * @property integer $psn_id
+ * @property string $mb_password
  * @property string $mb_title
  * @property string $mb_name
  * @property integer $mb_idcard
@@ -42,19 +43,20 @@ class TableMember extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('psn_id, pst_id, active , mb_idcard,mb_name ,mb_email ,mb_mobile,mb_password ', 'required'),
+			array('psn_id, pst_id, active , mb_idcard,mb_name ,mb_email ,mb_mobile ', 'required'),
 			array('psn_id, mb_idcard, pst_id, created_by, update_by', 'numerical', 'integerOnly'=>true),
+			array('mb_password', 'length', 'max'=>20),
 			array('mb_title', 'length', 'max'=>18),
 			array('mb_email', 'unique'), // ห้ามซ้ำ
 			array('mb_mobile', 'unique'), // ห้ามซ้ำ
 			array('mb_idcard', 'unique'), // ห้ามซ้ำ
-			array('mb_name, mb_email, mb_password','length', 'max'=>255),
+			array('mb_name, mb_email', 'length', 'max'=>255),
 			array('mb_mobile', 'length', 'max'=>12),
 			array('active', 'length', 'max'=>1),
 			array('created_date, update_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('mb_id, psn_id, mb_title, mb_name, mb_idcard, mb_mobile,mb_password, mb_email, pst_id, created_date, created_by, update_date, update_by, active', 'safe', 'on'=>'search'),
+			array('mb_id, psn_id, mb_password, mb_title, mb_name, mb_idcard, mb_mobile, mb_email, pst_id, created_date, created_by, update_date, update_by, active', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -81,11 +83,11 @@ class TableMember extends CActiveRecord
 		return array(
 			'mb_id' => 'Mb',
 			'psn_id' => 'รหัสพนักงาน',
+			'mb_password' => 'รหัสผ่าน',
 			'mb_title' => 'คำนำหน้า',
 			'mb_name' => 'ชื่อ - นามสกุล',
 			'mb_idcard' => 'หมายเลขบัตรประชาชน	',
 			'mb_mobile' => 'หมายเลขโทรศัพท์มือถือ	',
-			'mb_password' => 'รหัสผ่าน',
 			'mb_email' => 'อีเมลล์	',
 			'pst_id' => 'ตำแหน่ง',
 			'created_date' => 'วันที่สมัคร',
@@ -101,7 +103,6 @@ class TableMember extends CActiveRecord
 			{
 					$this->created_date=new CDbExpression('NOW()');
 					//$this->created_by=Yii::app()->table_member->mb_id;
-
 			}else{
 				$this->update_date=new CDbExpression('NOW()');
 			//	$this->update_by=Yii::app()->table_member->mb_id;
@@ -129,11 +130,11 @@ class TableMember extends CActiveRecord
 
 		$criteria->compare('mb_id',$this->mb_id);
 		$criteria->compare('psn_id',$this->psn_id);
+		$criteria->compare('mb_password',$this->mb_password,true);
 		$criteria->compare('mb_title',$this->mb_title,true);
 		$criteria->compare('mb_name',$this->mb_name,true);
 		$criteria->compare('mb_idcard',$this->mb_idcard);
 		$criteria->compare('mb_mobile',$this->mb_mobile,true);
-		$criteria->compare('mb_password',$this->mb_password,true);
 		$criteria->compare('mb_email',$this->mb_email,true);
 		$criteria->compare('pst_id',$this->pst_id);
 		$criteria->compare('created_date',$this->created_date,true);

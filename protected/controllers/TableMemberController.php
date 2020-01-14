@@ -25,15 +25,15 @@ class TableMemberController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
+/*	public function accessRules()
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','create'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('update','view'),
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -44,7 +44,7 @@ class TableMemberController extends Controller
 				'users'=>array('*'),
 			),
 		);
-	}
+	}*/
 
 	/**
 	 * Displays a particular model.
@@ -93,11 +93,11 @@ class TableMemberController extends Controller
 		  $model->attributes=$_POST['TableMember'];
 
 			$ct_psn_id=$model->psn_id;
+			$ct_mb_password=$model->mb_password;
 			$ct_mb_title=$model->mb_title;
 			$ct_mb_name=$model->mb_name;
 			$ct_mb_idcard=$model->mb_idcard;
 			$ct_mb_mobile=$model->mb_mobile;
-			$ct_mb_password=$model->mb_password;
 			$ct_mb_email=$model->mb_email;
 			$ct_pst_id=$model->pst_id;
 			$ct_created_date=$model->created_date;
@@ -109,8 +109,8 @@ class TableMemberController extends Controller
 		}
 		if($model->save()){
 		// $this->redirect(array('view','id'=>$model->mb_id));
-		Email::sendMail($ct_psn_id,$ct_mb_title,$ct_mb_name,$ct_mb_idcard,$ct_mb_mobile,$ct_mb_password,$ct_mb_email,$ct_pst_id,
-			$ct_created_date,$ct_created_by,$ct_update_date,$ct_update_by,$ct_active);
+		Email::sendMail($ct_psn_id, $ct_mb_password, $ct_mb_title, $ct_mb_name, $ct_mb_idcard, $ct_mb_mobile, $ct_mb_email,$ct_pst_id,
+			$ct_created_date, $ct_created_by, $ct_update_date, $ct_update_by, $ct_active);
 		$this->redirect(array('site/login'));
 }
 		$position = MasterPosition::model()->findAll(array('order'=>'pst_id ASC'));

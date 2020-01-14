@@ -24,66 +24,73 @@ $password = implode(array_slice($chars, 0, $length));
           </div>
           <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-4">
+             <div class="col-md-4">
               <br>
-        <?php $form=$this->beginWidget('booster.widgets.TbActiveForm',array(
-         'id'=>'table-member-form',
-          //'htmlOptions' => array('onsubmit' => 'SendSuccess()'),
+                  <?php $form=$this->beginWidget('booster.widgets.TbActiveForm',array(
+                    'id'=>'table-member-form',
+                      //'htmlOptions' => array('onsubmit' => 'SendSuccess()'),
+                    'enableAjaxValidation'=>false,
+                    )); ?>
 
-         'enableAjaxValidation'=>false,
-        )); ?>
-       <?php //echo $form->errorSummary($model); ?>
-       <div class="form-group">
-         <?php //echo $form->labelEx($model,'psn_id',array('class'=>'txt1')); ?>
-         <?php echo $form->dropDownList($model,'psn_id',CHtml::listData($employ,'psn_id','psn_per_id')
-               ,array('class'=>'form-control'),
-                 array('promt'=>'รหัสพนักงาน','psn_id'=>'employ')
-               ); ?>
+                        <!-- echo $form->errorSummary($model);  -->
 
-       </div>
-       <div class="form-row">
-         <?php //echo $form->labelEx($model,'mb_title',array('class'=>'txt1')); ?>
-         <div class="col-4">
-         <?php echo ZHtml::enumDropDownList($model,'mb_title',array('class'=>'form-control ')); ?>
-         </div>
-         <div class="col">
-         <?php //echo $form->labelEx($model,'mb_name',array('class'=>'txt1')); ?>
-         <?php echo $form->textField($model,'mb_name',array('class'=>'form-control','placeholder'=>'ชื่อ - นามสกุล')); ?>
-         </div>
-       </div>
-       <div class="form-group">
-         <?php //echo $form->labelEx($model,'mb_idcard',array('class'=>'txt1')); ?>
-         <?php echo $form->textField($model,'mb_idcard',array('class'=>'form-control','placeholder'=>'หมายเลขบัตรประชาชน','maxlength'=>13)); ?>
-       </div>
+                      <div class="form-group">
+                          <?php //echo $form->labelEx($model,'psn_id',array('class'=>'txt1')); ?>
+                          <?php echo $form->dropDownList($model,'psn_id',CHtml::listData($employ,'psn_id','psn_per_id')
+                            ,array('class'=>'form-control'),array('promt'=>'รหัสพนักงาน','psn_id'=>'employ')); ?>
+                      </div>
 
-           <div class="form-group">
-           <?php //echo $form->labelEx($model,'pst_id',array('class'=>'txt1')); ?>
-           <?php echo $form->dropDownList($model,'pst_id',CHtml::listData($position,'pst_id','pst_name')
-           ,array('class'=>'form-control'),
-                   array('promt'=>'ตำแหน่ง','pst_id'=>'position')
-                 ); ?>
-         </div>
-       <div class="form-group">
-         <?php //echo $form->labelEx($model,'mb_email',array('class'=>'txt1')); ?>
-         <?php echo $form->textField($model,'mb_email',array('class'=>'form-control','placeholder'=>'อีเมลล์')); ?>
-       </div>
-       <div class="form-group">
-         <?php //echo $form->labelEx($model,'mb_mobile',array('class'=>'txt1')); ?>
-         <?php echo $form->textField($model,'mb_mobile',array('class'=>'form-control','placeholder'=>'หมายเลขโทรศัพท์มือถือ','maxlength'=>10,'size'=>'30px')); ?>
-       </div>
-        <?php echo $form->hiddenField($model,'mb_password',array('class'=>'form-control','value'=>$password)); ?>
-         <?php echo $form->hiddenField($model,'active',array('class'=>'form-control','value'=>'y')); ?>
+                        <?php echo $form->hiddenField($model,'mb_password',array('class'=>'form-control','value'=>$password)); ?>
+                       
+                      <div class="form-row">
+                          <?php //echo $form->labelEx($model,'mb_title',array('class'=>'txt1')); ?>
+                        <div class="col-4">
+                          <?php echo ZHtml::enumDropDownList($model,'mb_title',array('class'=>'form-control ')); ?>
+                          <?php echo $form->error($model,'mb_title'); ?>
+                        </div>
 
-       <div class="form-group">
-         <?php echo CHtml::submitButton($model->isNewRecord ? 'สมัคร' : 'Save',array('class'=>'btn btn-lg btn-block','onclick'=>'SendSuccess();')); ?>
+                        <div class="col">
+                          <?php //echo $form->labelEx($model,'mb_name',array('class'=>'txt1')); ?>
+                          <?php echo $form->textField($model,'mb_name',array('class'=>'form-control','placeholder'=>'ชื่อ - นามสกุล')); ?>
+                          <?php echo $form->error($model,'mb_name'); ?>
+                        </div>
+                      </div>
+                    
+                      <div class="form-group">
+                        <?php //echo $form->labelEx($model,'mb_idcard',array('class'=>'txt1')); ?>
+                        <?php echo $form->textField($model,'mb_idcard',array('class'=>'form-control','placeholder'=>'หมายเลขบัตรประชาชน','maxlength'=>13)); ?>
+                        <?php echo $form->error($model,'mb_idcard'); ?>
+                      </div>
 
-       </div>
-     <?php $this->endWidget(); ?>
-         </div>
-         <div class="col-md-4"></div>
+                      <div class="form-group">
+                          <?php //echo $form->labelEx($model,'pst_id',array('class'=>'txt1')); ?>
+                          <?php echo $form->dropDownList($model,'pst_id',CHtml::listData($position,'pst_id','pst_name')
+                          ,array('class'=>'form-control'),array('promt'=>'ตำแหน่ง','pst_id'=>'position')); ?>
+                          <?php echo $form->error($model,'pst_id'); ?>
+                      </div>
+
+                      <div class="form-group">
+                        <?php //echo $form->labelEx($model,'mb_email',array('class'=>'txt1')); ?>
+                        <?php echo $form->textField($model,'mb_email',array('class'=>'form-control','placeholder'=>'อีเมลล์')); ?>
+                        <?php echo $form->error($model,'mb_email'); ?>
+                      </div>
+
+                      <div class="form-group">
+                        <?php //echo $form->labelEx($model,'mb_mobile',array('class'=>'txt1')); ?>
+                        <?php echo $form->textField($model,'mb_mobile',array('class'=>'form-control','placeholder'=>'หมายเลขโทรศัพท์มือถือ','maxlength'=>10,'size'=>'30px')); ?>
+                        <?php echo $form->error($model,'mb_mobile'); ?>
+                      </div>
+
+                      <?php echo $form->hiddenField($model,'active',array('class'=>'form-control','value'=>'y')); ?>
+
+                    <div class="form-group">
+                      <?php echo CHtml::submitButton($model->isNewRecord ? 'สมัคร' : 'Save',array('class'=>'btn btn-lg btn-block','onclick'=>'SendSuccess();')); ?>
+                    </div>
+                <?php $this->endWidget(); ?>
+              </div>
+            <div class="col-md-4"></div>
+          </div>
         </div>
-     </div>
-
       </div>
     </div>
   </div>

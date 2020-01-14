@@ -22,8 +22,8 @@ class Email {
 *
 */
   // public static function sendMail($ct_name,$ct_lastname,$ct_tell,$ct_mail,$ct_sub,$ct_dec){
-    public static function sendMail($ct_psn_id,$ct_mb_title,$ct_mb_name,$ct_mb_idcard,$ct_mb_mobile,$ct_mb_password,$ct_mb_email,$ct_pst_id,
-    $ct_created_date,$ct_created_by,$ct_update_date,$ct_update_by,$ct_active){
+    public static function sendMail($ct_psn_id, $ct_mb_password, $ct_mb_title, $ct_mb_name, $ct_mb_idcard, $ct_mb_mobile, $ct_mb_email,$ct_pst_id,
+    $ct_created_date, $ct_created_by, $ct_update_date, $ct_update_by, $ct_active){
 
       // Yii::import('application.extensions.phpmailer.JPhpMailer');
       Yii::import('application.extensions.mailer.EMailer');
@@ -39,10 +39,9 @@ class Email {
         <body>
 
             <h1> คุณได้ทำการลงทะเบียนใช้งานระบบ OT สำเร็จ </h1>
+            <h3>รหัสผ่านของคุณคือ '.$ct_mb_password.'<br></h3>
 
-            <h3>รหัสผ่านของคุณ คือ '.$ct_mb_password.'<br></h3>
-
-
+           
         </body>
         ';
 

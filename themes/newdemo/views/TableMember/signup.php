@@ -3,6 +3,12 @@
     font-family: 'Kanit';
   }
 </style>
+<?php
+$length = 10;
+$chars = array_merge(range(0,9), range('a','z'), range('A','Z'));
+shuffle($chars);
+$password = implode(array_slice($chars, 0, $length));
+ ?>
 <div class="container">
   <div id="home" class="intro route bg-image"style="background-image: url(#fff)">
   <br><br><center><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/logo1.png'?>" width="270" height="78"></center>
@@ -33,6 +39,7 @@
                ,array('class'=>'form-control'),
                  array('promt'=>'รหัสพนักงาน','psn_id'=>'employ')
                ); ?>
+
        </div>
        <div class="form-row">
          <?php //echo $form->labelEx($model,'mb_title',array('class'=>'txt1')); ?>
@@ -64,7 +71,7 @@
          <?php //echo $form->labelEx($model,'mb_mobile',array('class'=>'txt1')); ?>
          <?php echo $form->textField($model,'mb_mobile',array('class'=>'form-control','placeholder'=>'หมายเลขโทรศัพท์มือถือ','maxlength'=>10,'size'=>'30px')); ?>
        </div>
-
+        <?php echo $form->hiddenField($model,'mb_password',array('class'=>'form-control','value'=>$password)); ?>
          <?php echo $form->hiddenField($model,'active',array('class'=>'form-control','value'=>'y')); ?>
 
        <div class="form-group">

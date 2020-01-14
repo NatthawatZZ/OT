@@ -21,7 +21,7 @@ class UserIdentity extends CUserIdentity
 		$user = TableMember::model()->findByAttributes(array('mb_email'=>$this->username));
 		if($user === null){
 			//$this->errorCode = self::ERROR_USERNAME_INVALLD;
-		}else if($user->mb_mobile != $this->password){
+		}else if($user->mb_password != $this->password){
 			//$this->errorCode=self::ERROR_PASSWORD_INVALLD;
 		}else{
 			$this->errorCode=self::ERROR_NONE;

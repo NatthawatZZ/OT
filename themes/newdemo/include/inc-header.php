@@ -15,7 +15,7 @@
     </button>
     <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link js-scroll " href="index.php"><?php echo $nav1 ;?></a>
         </li>
         <li class="nav-item">

@@ -51,8 +51,8 @@
         )); ?>
   <div class="contain">
     <div class="row">
-      <div class="col-md"></div>
-      <div class="col-md-3">
+
+      <div class="col-md-12">
         <div class="card" id="logincontain">
           <!-- <img class="card-img-top" src="include/img/Untitled-2-01.jpg" alt="Card image cap"> -->
           <img class="card-img-top" src="<?php echo Yii::app()->theme->baseUrl.'/include/img/Untitled-2-01.jpg'?>" alt="Card image cap">
@@ -89,7 +89,7 @@
           </div>
         </div>
       </div><!-- ------- end row id login -------- -->
-        <div class="col-md"></div>
+
     </div><!-- ------- end class container-fluid -------- -->
 
 

@@ -1,0 +1,49 @@
+html{
+  font-size: 0.8em;
+}
+
+body{
+  font-family: "Kanit" !important;
+}
+/* #bgbody {
+    background-image: url(../img/Winter.jpg);
+} */
+.contain{
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+.card{
+  max-width: 100%;
+  width: 50%;
+  margin: 10% auto 0 auto;
+}
+#bg{
+    /* background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%); */
+    background-image: url(../img/132.jpg);
+
+
+}
+
+/* #btn .col-md-4 {
+  margin-top: 9%;
+  margin-bottom: 18%;
+} */
+
+/* #btn .col-md-6 {
+  background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%); */
+  /* background-image: url(../img/21404.jpg); */
+  /* background-repeat: no-repeat;
+  background-position: center;
+} */
+
+
+.btn-block {
+    display: block;
+    width: 100%;
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+}

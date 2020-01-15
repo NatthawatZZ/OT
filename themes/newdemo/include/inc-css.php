@@ -14,6 +14,8 @@ $clientScript->registerCssFile($path_theme.'/lib/ionicons/css/ionicons.min.css')
 $clientScript->registerCssFile($path_theme.'/lib/owlcarousel/assets/owl.carousel.min.css');
 $clientScript->registerCssFile($path_theme.'/lib/lightbox/css/lightbox.min.css');
 
+
+
 // <!-- Main Stylesheet File -->
 $clientScript->registerCssFile($path_theme.'/css/style.css');
 ?>

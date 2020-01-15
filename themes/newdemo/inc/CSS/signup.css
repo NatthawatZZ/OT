@@ -1,24 +1,37 @@
 body{
   font-family: 'Kanit', sans-serif;
+  padding-top: 50px;
+  background-image: url(../img/img3.jpg);
+  background-position: center,bottom;
+  background-repeat: no-repeat;
+  /* background-color: skyblue; */
 }
-#signup h1 {
-	text-align: center;
-	margin-top: 10%;
+
+#body1{
+  /* background-image: url(.../image/regis.jpg); */
+  padding-top: 50px;
+}
+h1{
+  color: #034791;
+}
+h1,h2,h3,h4,h5,h6{
+  text-align: center;
+
 }
 .btn-block {
-    display: block;
-    width: 100%;
+    /* display: block; */
+    /* width: 100%; */
     background-color: #3C59F9;
     color: #ffffff;
     border-radius: 46px;
 }
 .form-control {
-    display: block;
-    width: 100%;
+
+    /* width: 100%; */
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 300;
     line-height: 1.5;
     color: #495057;
     background-color: #f8f9fa;
@@ -31,9 +44,9 @@ body{
 .form-row{
     margin-bottom: 15px;
 }
-.btn-primary{
-  width: 100%;
-}
+/* .btn-primary{
+    width: 100%;
+} */
 
 @media (min-width: 576px) {
     .container-fluid {
@@ -58,3 +71,34 @@ body{
       max-width: 1140px;
     }
   }
+  form{
+    background-color: white;
+    border-radius: 0.25rem;
+    padding: 20px,20px,20px,0px;
+    width: 700px;
+    height: 800px;
+    -webkit-box-shadow: 0 50px 70px rgba(0,0,0,.2);
+    box-shadow: 0 50px 70px rgba(0,0,0,.2);
+    margin-top: 40px;
+  }
+  fieldset{
+    /* margin: 20px,30px,80px,30px; */
+    min-width: 5px;
+    padding: 10px;
+    margin: 40px;
+    border: 2px;
+    background-color: #ffffff;
+
+  }
+.img1{
+    height:50%;
+    position:fixed;
+    right:20px;
+    bottom:0px;
+    width:200px;
+    z-index: 99;
+  }
+
+b{
+  color: red;
+}

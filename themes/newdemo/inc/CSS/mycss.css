@@ -1,5 +1,6 @@
 body{
     background: #ffffff;
+    font-family: 'Kanit', sans-serif;
 }
 .navbar{
     background-image: linear-gradient(120deg, #faca2b 0%, #fd673d 100%);

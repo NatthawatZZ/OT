@@ -33,14 +33,13 @@ class HomeController extends Controller
 
 	public function actionIndex()
 	{
-	$this->layout='main';
-
+		$this->layout='main';
 		$this->render('index');
 
 	}
 	public function actionOt()
 	{
-		$this->layout='main';
+		$this->layout=false;
 		$this->render('ot');
 
 	}

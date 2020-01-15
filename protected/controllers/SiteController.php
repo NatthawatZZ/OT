@@ -48,6 +48,8 @@ class SiteController extends Controller
 		$this->render('forgot');
 	}
 
+
+
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -93,7 +95,7 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
-		// $this->layout = false;
+		$this->layout = false;
 		$model=new LoginForm;
 
 		// if it is ajax validation request
@@ -109,12 +111,15 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				// $this->redirect(Yii::app()->user->returnUrl);
+			//	 $this->redirect(Yii::app()->user->returnUrl->getUrl() 'site/view');
 					$this->redirect(array('home/index'));
+
+
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}
+
 
 	/**
 	 * Logs out the current user and redirect to homepage.
@@ -124,4 +129,14 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+	public function loadModel($id)
+	{
+		$model=TableMember::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+
 }

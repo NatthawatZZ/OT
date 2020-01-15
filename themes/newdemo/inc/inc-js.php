@@ -4,3 +4,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
 <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/sweetalert2.min.js"></script>
+<script src="<?php echo Yii::app()->theme->baseUrl; ?>/inc/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo Yii::app()->theme->baseUrl; ?>/inc/js/popper_1_14_3.min.js"></script>
+<script src="<?php echo Yii::app()->theme->baseUrl; ?>/inc/js/bootstrap.min.js"></script>

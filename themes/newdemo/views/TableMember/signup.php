@@ -1,107 +1,135 @@
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ลงทะเบียน</title>
+<?php
+Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/inc/CSS/bootstrap.min.css');
+Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/inc/CSS/signup.css');
+Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/include/vendor/fontawesome-free/css/all.min.css');
+
+Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/inc/js/jquery-3.3.1.min.js',CClientScript::POS_HEAD);
+Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/inc/js/popper_1_14_3.min.js',CClientScript::POS_HEAD);
+Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/inc/js/bootstrap.min.js',CClientScript::POS_HEAD);
+
+?>
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+       crossorigin="anonymous"> -->
 <style >
-  .container-fluid{
-    font-family: 'Kanit';
+html{
+  font-size: 0.8em;
+}
+  body{
+    font-family: 'Kanit',san-serif;
+  }
+  label{
+    font-weight: 400;
+      font-size: 1.3rem;
+  }
+
+  .btn{
+    font-size: 1.5rem;
   }
 </style>
-<?php
-$length = 10;
-$chars = array_merge(range(0,9), range('a','z'), range('A','Z'));
-shuffle($chars);
-$password = implode(array_slice($chars, 0, $length));
- ?>
-<div class="container">
-  <div id="home" class="intro route bg-image"style="background-image: url(#fff)">
-  <br><br><center><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/image/logo1.png'?>" width="270" height="78"></center>
-    <div class="intro-content display-table">
-      <div class="table-cell">
-        <div class="container-fluid">
-          <div class="row" id="signup">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-              <h1 style="font-size:40px"> ลงทะเบียนผู้ใช้งาน </h1>
-            </div>
-            <div class="col-md-4"></div>
-          </div>
-          <div class="row">
-            <div class="col-md-4"></div>
-             <div class="col-md-4">
-              <br>
-                  <?php $form=$this->beginWidget('booster.widgets.TbActiveForm',array(
-                    'id'=>'table-member-form',
-                      //'htmlOptions' => array('onsubmit' => 'SendSuccess()'),
-                    'enableAjaxValidation'=>false,
-                    )); ?>
+</head>
+<body id="body1">
+  <div class="container-fluid">
 
-                        <!-- echo $form->errorSummary($model);  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
+        <a class="navbar-brand text-white"><img src="<?php echo Yii::app()->theme->baseUrl.'/inc/img/logo1.png'?>"></a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><br>
+                    <h5>ระบบขอเบิกค่า OT และ ค่าเดินทาง</h5>
+                </li>
 
-                      <div class="form-group">
-                          <?php //echo $form->labelEx($model,'psn_id',array('class'=>'txt1')); ?>
-                          <?php echo $form->dropDownList($model,'psn_id',CHtml::listData($employ,'psn_id','psn_per_id')
-                            ,array('class'=>'form-control'),array('promt'=>'รหัสพนักงาน','psn_id'=>'employ')); ?>
-                      </div>
-
-                        <?php echo $form->hiddenField($model,'mb_password',array('class'=>'form-control','value'=>$password)); ?>
-                       
-                      <div class="form-row">
-                          <?php //echo $form->labelEx($model,'mb_title',array('class'=>'txt1')); ?>
-                        <div class="col-4">
-                          <?php echo ZHtml::enumDropDownList($model,'mb_title',array('class'=>'form-control ')); ?>
-                          <?php echo $form->error($model,'mb_title'); ?>
-                        </div>
-
-                        <div class="col">
-                          <?php //echo $form->labelEx($model,'mb_name',array('class'=>'txt1')); ?>
-                          <?php echo $form->textField($model,'mb_name',array('class'=>'form-control','placeholder'=>'ชื่อ - นามสกุล')); ?>
-                          <?php echo $form->error($model,'mb_name'); ?>
-                        </div>
-                      </div>
-                    
-                      <div class="form-group">
-                        <?php //echo $form->labelEx($model,'mb_idcard',array('class'=>'txt1')); ?>
-                        <?php echo $form->textField($model,'mb_idcard',array('class'=>'form-control','placeholder'=>'หมายเลขบัตรประชาชน','maxlength'=>13)); ?>
-                        <?php echo $form->error($model,'mb_idcard'); ?>
-                      </div>
-
-                      <div class="form-group">
-                          <?php //echo $form->labelEx($model,'pst_id',array('class'=>'txt1')); ?>
-                          <?php echo $form->dropDownList($model,'pst_id',CHtml::listData($position,'pst_id','pst_name')
-                          ,array('class'=>'form-control'),array('promt'=>'ตำแหน่ง','pst_id'=>'position')); ?>
-                          <?php echo $form->error($model,'pst_id'); ?>
-                      </div>
-
-                      <div class="form-group">
-                        <?php //echo $form->labelEx($model,'mb_email',array('class'=>'txt1')); ?>
-                        <?php echo $form->textField($model,'mb_email',array('class'=>'form-control','placeholder'=>'อีเมลล์')); ?>
-                        <?php echo $form->error($model,'mb_email'); ?>
-                      </div>
-
-                      <div class="form-group">
-                        <?php //echo $form->labelEx($model,'mb_mobile',array('class'=>'txt1')); ?>
-                        <?php echo $form->textField($model,'mb_mobile',array('class'=>'form-control','placeholder'=>'หมายเลขโทรศัพท์มือถือ','maxlength'=>10,'size'=>'30px')); ?>
-                        <?php echo $form->error($model,'mb_mobile'); ?>
-                      </div>
-
-                      <?php echo $form->hiddenField($model,'active',array('class'=>'form-control','value'=>'y')); ?>
-
-                    <div class="form-group">
-                      <?php echo CHtml::submitButton($model->isNewRecord ? 'สมัคร' : 'Save',array('class'=>'btn btn-lg btn-block','onclick'=>'SendSuccess();')); ?>
-                    </div>
-                <?php $this->endWidget(); ?>
-              </div>
-            <div class="col-md-4"></div>
-          </div>
+            </ul>
         </div>
-      </div>
-    </div>
-  </div>
+    </nav>
 </div>
-<script>
-  function SendSuccess() {
-    // alert("Form submitted");
-    Swal.fire(
-        'Form submitted',
-          'Thank you ',
-          'success'
-      )
-  }
-  </script>
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-2">
+
+    </div>
+    <div class="col-5">
+  <form action="#" method="get" name="form"><br><br>
+    <h1>ลงทะเบียน</h1>
+<fieldset>
+    <legend style="font-size:2rem;">กรอกข้อมูล</legend>
+    <div class="form-group">
+      <label for="exampleInputID">รหัสพนักงาน<b >*</b></label>
+      <input type="text" class="form-control" id="psn_id" placeholder="รหัสพนักงาน">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputID">รหัสผ่าน<b >*</b></label>
+      <input type="password" class="form-control" id="#" placeholder="รหัสผ่าน">
+    </div>
+
+    <div class="form-row">
+      <div class="col-2">
+      <label for="exampleInputtitle">คำนำหน้า<b >*</b></label>
+      <select class="form-control" id="mb_title">
+            <option value="1">นาย</option>
+            <option value="2">นาง</option>
+            <option value="3">นางสาว</option>
+        </select>
+      </div>
+      <div class="col">
+      <label for="exampleInputName">ชื่อ - นามสกุล<b >*</b></label>
+      <input type="text" class="form-control" id="mb_name" placeholder="ชื่อ - นามสกุล">
+    </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputIDCARD">หมายเลขบัตรประชาชน<b >*</b></label>
+      <input type="password" class="form-control" id="mb_idcard" placeholder="หมายเลขบัตรประชาชน">
+    </div>
+    <div class="form-group">
+      <label for="exampleInpuDepartment">ตำแหน่งงาน<b >*</b></label>
+      <select class="form-control" id="pst_id">
+        <option value="0">ตำแหน่งงาน</option>
+        <option value="1">Event Marketing Director</option>
+        <option value="2">Creative Event Marketing Manage</option>
+        <option value="3">Digital PR Manager</option>
+        <option value="4">Human Resources Manager</option>
+        <option value="5">Accounting</option>
+        <option value="6">Digital PR & Event Marketing</option>
+        <option value="7">Creative and Graphic Designer</option>
+        <option value="8">Web and Graphic Designer</option>
+        <option value="9">Systems Analyst</option>
+        <option value="10">Programmer</option>
+        <option value="11">Web Developer</option>
+        <option value="12">Messenger</option>
+    </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputE-mail">อีเมลล์<b >*</b></label>
+      <input type="text" class="form-control" id="mb_email" placeholder="อีเมลล์">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPhone">หมายเลขโทรศัพท์<b >*</b></label>
+      <input type="text" class="form-control" id="mb_mobile" placeholder="หมายเลขโทรศัพท์">
+    </div>
+    <div class="form-group">
+    <center>
+      <button type="submit" class="btn btn-danger">ยกเลิก</button> &nbsp;&nbsp;&nbsp;
+      <button type="submit" class="btn btn-primary">ลงทะเบียน</button></center>
+    </div>
+</fieldset>
+</form>
+</div>
+  <div class="col-4">
+  <img src="<?php echo Yii::app()->theme->baseUrl. '/inc/img/regis.png'?>" class="img1" width="175" height="300">
+  </div>
+  </div>
+  </div>
+  </body>
+</html>

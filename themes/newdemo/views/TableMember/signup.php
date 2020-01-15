@@ -18,14 +18,14 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/inc/js
        crossorigin="anonymous"> -->
 <style >
 html{
-  font-size: 0.8em;
+  font-size: 0.75em;
 }
   body{
     font-family: 'Kanit',san-serif;
   }
   label{
     font-weight: 400;
-      font-size: 1.3rem;
+      font-size: 1rem;
   }
 
   .btn{
@@ -57,74 +57,70 @@ html{
 
     </div>
     <div class="col-5">
-  <form action="#" method="get" name="form"><br><br>
+  <!-- <form action="#" method="get" name="form"><br><br> -->
+  <?php $form=$this->beginWidget('booster.widgets.TbActiveForm',array(
+    'id'=>'table-member-form',
+      //'htmlOptions' => array('onsubmit' => 'SendSuccess()'),
+    'enableAjaxValidation'=>false,
+  )); ?><br><br>
     <h1>ลงทะเบียน</h1>
 <fieldset>
     <legend style="font-size:2rem;">กรอกข้อมูล</legend>
     <div class="form-group">
       <label for="exampleInputID">รหัสพนักงาน<b >*</b></label>
-      <input type="text" class="form-control" id="psn_id" placeholder="รหัสพนักงาน">
+      <!-- <input type="text" class="form-control" id="psn_id" placeholder="รหัสพนักงาน"> -->
+      <?php echo $form->textField($model,'psn_id',array('class'=>'form-control','placeholder'=>'รหัสพนักงาน')); ?>
     </div>
 
     <div class="form-group">
       <label for="exampleInputID">รหัสผ่าน<b >*</b></label>
-      <input type="password" class="form-control" id="#" placeholder="รหัสผ่าน">
+      <!-- <input type="password" class="form-control" id="#" placeholder="รหัสผ่าน"> -->
+      <?php echo $form->textField($model,'mb_password',array('class'=>'form-control','placeholder'=>'รหัสผ่าน')); ?>
     </div>
 
     <div class="form-row">
       <div class="col-2">
       <label for="exampleInputtitle">คำนำหน้า<b >*</b></label>
-      <select class="form-control" id="mb_title">
-            <option value="1">นาย</option>
-            <option value="2">นาง</option>
-            <option value="3">นางสาว</option>
-        </select>
+      <?php echo ZHtml::enumDropDownList($model,'mb_title',array('class'=>'form-control ')); ?>
       </div>
       <div class="col">
       <label for="exampleInputName">ชื่อ - นามสกุล<b >*</b></label>
-      <input type="text" class="form-control" id="mb_name" placeholder="ชื่อ - นามสกุล">
+      <!-- <input type="text" class="form-control" id="mb_name" placeholder="ชื่อ - นามสกุล"> -->
+        <?php echo $form->textField($model,'mb_name',array('class'=>'form-control','placeholder'=>'ชื่อ - นามสกุล')); ?>
     </div>
     </div>
-
 
     <div class="form-group">
       <label for="exampleInputIDCARD">หมายเลขบัตรประชาชน<b >*</b></label>
-      <input type="password" class="form-control" id="mb_idcard" placeholder="หมายเลขบัตรประชาชน">
+      <!-- <input type="password" class="form-control" id="mb_idcard" placeholder="หมายเลขบัตรประชาชน"> -->
+      <?php echo $form->textField($model,'mb_idcard',array('class'=>'form-control','placeholder'=>'หมายเลขบัตรประชาชน','maxlength'=>13)); ?>
     </div>
     <div class="form-group">
       <label for="exampleInpuDepartment">ตำแหน่งงาน<b >*</b></label>
-      <select class="form-control" id="pst_id">
-        <option value="0">ตำแหน่งงาน</option>
-        <option value="1">Event Marketing Director</option>
-        <option value="2">Creative Event Marketing Manage</option>
-        <option value="3">Digital PR Manager</option>
-        <option value="4">Human Resources Manager</option>
-        <option value="5">Accounting</option>
-        <option value="6">Digital PR & Event Marketing</option>
-        <option value="7">Creative and Graphic Designer</option>
-        <option value="8">Web and Graphic Designer</option>
-        <option value="9">Systems Analyst</option>
-        <option value="10">Programmer</option>
-        <option value="11">Web Developer</option>
-        <option value="12">Messenger</option>
-    </select>
+      <?php echo $form->dropDownList($model,'pst_id',CHtml::listData($position,'pst_id','pst_name')
+      ,array('class'=>'form-control'),array('promt'=>'ตำแหน่ง','pst_id'=>'position')); ?>
     </div>
     <div class="form-group">
       <label for="exampleInputE-mail">อีเมลล์<b >*</b></label>
-      <input type="text" class="form-control" id="mb_email" placeholder="อีเมลล์">
+      <!-- <input type="text" class="form-control" id="mb_email" placeholder="อีเมลล์"> -->
+      <?php echo $form->emailField($model,'mb_email',array('class'=>'form-control','placeholder'=>'อีเมลล์')); ?>
     </div>
 
     <div class="form-group">
       <label for="exampleInputPhone">หมายเลขโทรศัพท์<b >*</b></label>
-      <input type="text" class="form-control" id="mb_mobile" placeholder="หมายเลขโทรศัพท์">
+      <!-- <input type="text" class="form-control" id="mb_mobile" placeholder="หมายเลขโทรศัพท์"> -->
+        <?php echo $form->textField($model,'mb_mobile',array('class'=>'form-control','placeholder'=>'หมายเลขโทรศัพท์','maxlength'=>10)); ?>
     </div>
     <div class="form-group">
     <center>
       <button type="submit" class="btn btn-danger">ยกเลิก</button> &nbsp;&nbsp;&nbsp;
-      <button type="submit" class="btn btn-primary">ลงทะเบียน</button></center>
+      <!-- <button type="submit" class="btn btn-primary">ลงทะเบียน</button> -->
+    <?php echo CHtml::submitButton($model->isNewRecord ? 'ลงทะเบียน' : 'Save',array('class'=>'btn btn-primary')); ?>
+    </center>
     </div>
 </fieldset>
-</form>
+<!-- </form> -->
+      <?php $this->endWidget(); ?>
 </div>
   <div class="col-4">
   <img src="<?php echo Yii::app()->theme->baseUrl. '/inc/img/regis.png'?>" class="img1" width="175" height="300">

@@ -69,7 +69,7 @@ html{
     <div class="form-group">
       <label for="exampleInputID">รหัสพนักงาน<b >*</b></label>
       <!-- <input type="text" class="form-control" id="psn_id" placeholder="รหัสพนักงาน"> -->
-      <?php echo $form->textField($model,'psn_id',array('class'=>'form-control','placeholder'=>'รหัสพนักงาน')); ?>
+      <?php echo $form->textField($model,'psn_id',array('class'=>'form-control','placeholder'=>'รหัสพนักงาน'),CHtml::listData($employ,'psn_id','psn_per_id')); ?>
     </div>
 
     <div class="form-group">
@@ -111,6 +111,7 @@ html{
       <!-- <input type="text" class="form-control" id="mb_mobile" placeholder="หมายเลขโทรศัพท์"> -->
         <?php echo $form->textField($model,'mb_mobile',array('class'=>'form-control','placeholder'=>'หมายเลขโทรศัพท์','maxlength'=>10)); ?>
     </div>
+        <?php echo $form->hiddenField($model,'active',array('class'=>'form-control','value'=>'y')); ?>
     <div class="form-group">
     <center>
       <!-- <button  href="index.php?r=site/login" class="btn btn-danger">ยกเลิก</button> &nbsp;&nbsp;&nbsp; -->

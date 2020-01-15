@@ -6,19 +6,7 @@
   <title>เข้าสู่ระบบ</title>
   <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 
-  <style >
-  html{
-    font-size: 0.9em;
-  }
-    .card{
-      margin-top: 20%;
-    }
-    .btn-block {
-        display: block;
-        width: 100%;
-        background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);}
 
-  </style>
 </head>
 <body id="bg">
   <div class="container-fluid">

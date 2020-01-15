@@ -113,7 +113,8 @@ html{
     </div>
     <div class="form-group">
     <center>
-      <button type="submit" class="btn btn-danger">ยกเลิก</button> &nbsp;&nbsp;&nbsp;
+      <!-- <button  href="index.php?r=site/login" class="btn btn-danger">ยกเลิก</button> &nbsp;&nbsp;&nbsp; -->
+      <a href="index.php?r=site/login" class="btn btn-danger">ยกเลิก</a>
       <!-- <button type="submit" class="btn btn-primary">ลงทะเบียน</button> -->
     <?php echo CHtml::submitButton($model->isNewRecord ? 'ลงทะเบียน' : 'Save',array('class'=>'btn btn-primary')); ?>
     </center>

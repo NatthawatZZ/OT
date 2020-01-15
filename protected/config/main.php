@@ -11,7 +11,7 @@ return array(
 	'theme'=>'newdemo',
 	 'timeZone' => 'Asia/Bangkok',
 	 'language'=>'th',
-	//'defaultController' => 'site/login',
+	'defaultController' => 'site/login',
 
 	// preloading 'log' component
 	'preload'=>array('log','booster'),

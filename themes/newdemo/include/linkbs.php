@@ -19,6 +19,7 @@
 
 <?php
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/include/css/login.css');
+Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/include/css/password.css');
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/include/vendor/fontawesome-free/css/all.min.css');
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/include/vendor/datatables/dataTables.bootstrap4.css');
 Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/include/css/sb-admin.css');

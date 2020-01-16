@@ -39,9 +39,10 @@ class Email {
         <body>
 
             <h1> คุณได้ทำการลงทะเบียนใช้งานระบบ OT สำเร็จ </h1>
+          <h3>Usernameของคุณคือ '.$ct_psn_id.'<br></h3>
             <h3>รหัสผ่านของคุณคือ '.$ct_mb_password.'<br></h3>
 
-           
+
         </body>
         ';
 

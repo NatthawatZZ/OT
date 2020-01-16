@@ -51,7 +51,7 @@ class LoginForm extends CFormModel
 		{
 			$this->_identity=new UserIdentity($this->username,$this->password);
 			if(!$this->_identity->authenticate())
-				$this->addError('password','อีเมลล์ หรือ รหัสผ่าน ไม่ถูกต้อง !!');
+				$this->addError('password','รหัสพนักงาน หรือ รหัสผ่าน ไม่ถูกต้อง !!');
 		}
 	}
 

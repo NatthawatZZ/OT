@@ -61,15 +61,19 @@ html{
   <?php $form=$this->beginWidget('booster.widgets.TbActiveForm',array(
     'id'=>'table-member-form',
       //'htmlOptions' => array('onsubmit' => 'SendSuccess()'),
-    'enableAjaxValidation'=>false,
+    'enableAjaxValidation'=>true,
+    'clientOptions' => [
+    'validateOnSubmit' => true]
   )); ?><br><br>
     <h1>ลงทะเบียน</h1>
+    <h2>*** isset ใน controller คล้าย SiteController ***</h2>
 <fieldset>
     <legend style="font-size:1.8rem;">กรอกข้อมูล</legend>
     <div class="form-group">
       <label for="exampleInputID">รหัสพนักงาน<b >*</b></label>
       <!-- <input type="text" class="form-control" id="psn_id" placeholder="รหัสพนักงาน"> -->
       <?php echo $form->textField($model,'psn_id',array('class'=>'form-control','placeholder'=>'รหัสพนักงาน'),CHtml::listData($employ,'psn_id','psn_per_id')); ?>
+      <?php echo $form->error($model,'psn_id'); ?>
     </div>
 
     <div class="form-group">
@@ -81,7 +85,7 @@ html{
     <div class="form-row">
       <div class="col-3">
       <label for="exampleInputtitle">คำนำหน้า<b >*</b></label>
-      <?php echo ZHtml::enumDropDownList($model,'mb_title',array('class'=>'form-control ')); ?>
+      <?php echo ZHtml::enumDropDownList($model,'mb_title',array('class'=>'form-control')); ?>
       </div>
       <div class="col">
       <label for="exampleInputName">ชื่อ-นามสกุล<b >*</b></label>
@@ -123,6 +127,7 @@ html{
 </fieldset>
 <!-- </form> -->
       <?php $this->endWidget(); ?>
+      	<!-- echo "<script>swal.Fire('Good job!','You clicked the button!','success')</script>"; -->
 </div>
   <div class="col-4">
   <img src="<?php echo Yii::app()->theme->baseUrl. '/inc/img/regis.png'?>" class="img1" width="175" height="300">

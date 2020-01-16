@@ -79,7 +79,7 @@ html{
     </div>
 
     <div class="form-row">
-      <div class="col-2">
+      <div class="col-3">
       <label for="exampleInputtitle">คำนำหน้า<b >*</b></label>
       <?php echo ZHtml::enumDropDownList($model,'mb_title',array('class'=>'form-control ')); ?>
       </div>

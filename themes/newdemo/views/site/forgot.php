@@ -46,7 +46,7 @@
                         <center>
                             <a class="btn btn-danger" href="index.php">ยกเลิก</a>
                             &nbsp; &nbsp;
-                            <a class="btn btn-warning" href="resetpassword.php">ดำเนินการต่อ
+                            <a class="btn btn-warning" href="index.php?r=TableMember/reset">ดำเนินการต่อ
                             </a>
                             <center>
                     </div>

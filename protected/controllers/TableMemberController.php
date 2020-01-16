@@ -58,6 +58,13 @@ class TableMemberController extends Controller
 		));
 	}
 
+	public function actionReset()
+	{
+		$this->layout=false;
+		$this->render('reset');
+
+	}
+
 	// public function actionIndex()
 	// {
 	// 	$model=new TableMember;

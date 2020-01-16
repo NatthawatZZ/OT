@@ -113,15 +113,20 @@ class TableMemberController extends Controller
 			$ct_update_by=$model->update_by;
 			$ct_active=$model->active;
 
-			
+
 			if($model->save()){
 			// $this->redirect(array('view','id'=>$model->mb_id));
 			Email::sendMail($ct_psn_id, $ct_mb_password, $ct_mb_title, $ct_mb_name, $ct_mb_idcard, $ct_mb_mobile, $ct_mb_email,$ct_pst_id,
 				$ct_created_date, $ct_created_by, $ct_update_date, $ct_update_by, $ct_active);
+				echo "<script>Swal.fire(
+  'Good job!',
+  'You clicked the button!',
+  'success')</script>";
 			$this->redirect(array('site/login'));
 		}else{
-			echo "<script>alert('Not Save')</script>";
+			echo "<script>alert('Good job!','You clicked the button!','success')</script>";
 		}
+
 		}
 
 		$position = MasterPosition::model()->findAll(array('order'=>'pst_id ASC'));

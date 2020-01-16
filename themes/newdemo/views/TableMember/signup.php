@@ -66,9 +66,8 @@ html{
     'validateOnSubmit' => true]
   )); ?><br><br>
     <h1>ลงทะเบียน</h1>
-    <h2>*** isset ใน controller คล้าย SiteController ***</h2>
 <fieldset>
-    <legend style="font-size:1.8rem;">กรอกข้อมูล</legend>
+    <legend style="font-size:1.5rem;">กรอกข้อมูล</legend>
     <div class="form-group">
       <label for="exampleInputID">รหัสพนักงาน<b >*</b></label>
       <!-- <input type="text" class="form-control" id="psn_id" placeholder="รหัสพนักงาน"> -->
@@ -80,6 +79,7 @@ html{
       <label for="exampleInputID">รหัสผ่าน<b >*</b></label>
       <!-- <input type="password" class="form-control" id="#" placeholder="รหัสผ่าน"> -->
       <?php echo $form->textField($model,'mb_password',array('class'=>'form-control','placeholder'=>'รหัสผ่าน')); ?>
+      <?php echo $form->error($model,'mb_password'); ?>
     </div>
 
     <div class="form-row">
@@ -91,6 +91,7 @@ html{
       <label for="exampleInputName">ชื่อ-นามสกุล<b >*</b></label>
       <!-- <input type="text" class="form-control" id="mb_name" placeholder="ชื่อ - นามสกุล"> -->
         <?php echo $form->textField($model,'mb_name',array('class'=>'form-control','placeholder'=>'ชื่อ - นามสกุล')); ?>
+        <?php echo $form->error($model,'mb_name'); ?>
     </div>
     </div>
 
@@ -98,6 +99,7 @@ html{
       <label for="exampleInputIDCARD">หมายเลขบัตรประชาชน<b >*</b></label>
       <!-- <input type="password" class="form-control" id="mb_idcard" placeholder="หมายเลขบัตรประชาชน"> -->
       <?php echo $form->textField($model,'mb_idcard',array('class'=>'form-control','placeholder'=>'หมายเลขบัตรประชาชน','maxlength'=>13)); ?>
+      <?php echo $form->error($model,'mb_idcard'); ?>
     </div>
     <div class="form-group">
       <label for="exampleInpuDepartment">ตำแหน่งงาน<b >*</b></label>
@@ -108,12 +110,14 @@ html{
       <label for="exampleInputE-mail">อีเมลล์<b >*</b></label>
       <!-- <input type="text" class="form-control" id="mb_email" placeholder="อีเมลล์"> -->
       <?php echo $form->emailField($model,'mb_email',array('class'=>'form-control','placeholder'=>'อีเมลล์')); ?>
+      <?php echo $form->error($model,'mb_email'); ?>
     </div>
 
     <div class="form-group">
       <label for="exampleInputPhone">หมายเลขโทรศัพท์<b >*</b></label>
       <!-- <input type="text" class="form-control" id="mb_mobile" placeholder="หมายเลขโทรศัพท์"> -->
         <?php echo $form->textField($model,'mb_mobile',array('class'=>'form-control','placeholder'=>'หมายเลขโทรศัพท์','maxlength'=>10)); ?>
+        <?php echo $form->error($model,'mb_mobile'); ?>
     </div>
         <?php echo $form->hiddenField($model,'active',array('class'=>'form-control','value'=>'y')); ?>
     <div class="form-group">

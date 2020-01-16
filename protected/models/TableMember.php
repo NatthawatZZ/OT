@@ -48,6 +48,7 @@ class TableMember extends CActiveRecord
 			array('mb_password', 'length', 'max'=>20),
 			array('mb_title', 'length', 'max'=>18),
 			array('mb_email', 'unique'), // ห้ามซ้ำ
+			array('psn_id','unique'),
 			array('mb_mobile', 'unique'), // ห้ามซ้ำ
 			array('mb_idcard', 'unique'), // ห้ามซ้ำ
 			array('mb_name, mb_email', 'length', 'max'=>255),
@@ -102,7 +103,7 @@ class TableMember extends CActiveRecord
 			if($this->isNewRecord)
 			{
 					$this->created_date=new CDbExpression('NOW()');
-					//$this->created_by=Yii::app()->table_member->mb_id;
+				//	$this->created_by= 'mb_id';
 			}else{
 				$this->update_date=new CDbExpression('NOW()');
 			//	$this->update_by=Yii::app()->table_member->mb_id;

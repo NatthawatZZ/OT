@@ -18,7 +18,7 @@ class UserIdentity extends CUserIdentity
 	 private $_id;
 	public function authenticate()
 	{
-		$user = TableMember::model()->findByAttributes(array('mb_email'=>$this->username));
+		$user = TableMember::model()->findByAttributes(array('psn_id'=>$this->username));
 		if($user === null){
 			//$this->errorCode = self::ERROR_USERNAME_INVALLD;
 		}else if($user->mb_password != $this->password){

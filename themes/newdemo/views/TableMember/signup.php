@@ -65,7 +65,7 @@ html{
   )); ?><br><br>
     <h1>ลงทะเบียน</h1>
 <fieldset>
-    <legend style="font-size:2rem;">กรอกข้อมูล</legend>
+    <legend style="font-size:1.8rem;">กรอกข้อมูล</legend>
     <div class="form-group">
       <label for="exampleInputID">รหัสพนักงาน<b >*</b></label>
       <!-- <input type="text" class="form-control" id="psn_id" placeholder="รหัสพนักงาน"> -->
@@ -84,7 +84,7 @@ html{
       <?php echo ZHtml::enumDropDownList($model,'mb_title',array('class'=>'form-control ')); ?>
       </div>
       <div class="col">
-      <label for="exampleInputName">ชื่อ - นามสกุล<b >*</b></label>
+      <label for="exampleInputName">ชื่อ-นามสกุล<b >*</b></label>
       <!-- <input type="text" class="form-control" id="mb_name" placeholder="ชื่อ - นามสกุล"> -->
         <?php echo $form->textField($model,'mb_name',array('class'=>'form-control','placeholder'=>'ชื่อ - นามสกุล')); ?>
     </div>

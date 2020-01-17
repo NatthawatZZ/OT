@@ -18,7 +18,7 @@ class HomeController extends Controller
 				// 	'users'=>array('*'),
 				// ),
 				array('allow', // allow authenticated user to perform 'create' and 'update' actions
-					'actions'=>array('index','view','create','update','ot'),
+					'actions'=>array('index','view','create','update','ot','travel'),
 					'users'=>array('@'),
 				),
 				array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -41,6 +41,12 @@ class HomeController extends Controller
 	{
 		$this->layout=false;
 		$this->render('ot');
+
+	}
+	public function actionTravel()
+	{
+		$this->layout=false;
+		$this->render('travel');
 
 	}
 

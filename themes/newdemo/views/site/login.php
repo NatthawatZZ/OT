@@ -69,7 +69,7 @@
                   <a href="index.php?r=TableMember/create">ลงทะเบียน</a><br>
                 <!-- คลิกเพื่อสมัคร -->
 
-                <a href="index.php?r=site/forgot">ลืมรหัสผ่าน?</a>
+                <a href="index.php?r=TableMember/forgot">ลืมรหัสผ่าน?</a>
                   <?php $this->endWidget(); ?>
               </p>
 
